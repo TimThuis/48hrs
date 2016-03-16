@@ -17,7 +17,8 @@ ActiveRecord::Schema.define(version: 20160316102650) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.integer  "user_id"
+    t.integer  "guide_id"
+    t.integer  "visitor_id"
     t.integer  "tour_id"
     t.date     "date"
     t.time     "check_in"
@@ -29,8 +30,9 @@ ActiveRecord::Schema.define(version: 20160316102650) do
     t.datetime "updated_at",  null: false
   end
 
+  add_index "bookings", ["guide_id"], name: "index_bookings_on_guide_id", using: :btree
   add_index "bookings", ["tour_id"], name: "index_bookings_on_tour_id", using: :btree
-  add_index "bookings", ["user_id"], name: "index_bookings_on_user_id", using: :btree
+  add_index "bookings", ["visitor_id"], name: "index_bookings_on_visitor_id", using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -90,7 +92,8 @@ ActiveRecord::Schema.define(version: 20160316102650) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "bookings", "tours"
-  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "users", column: "guide_id"
+  add_foreign_key "bookings", "users", column: "visitor_id"
   add_foreign_key "reviews", "bookings"
   add_foreign_key "tours", "categories"
   add_foreign_key "tours", "users"

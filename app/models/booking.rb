@@ -1,7 +1,8 @@
 class Booking < ActiveRecord::Base
-  belongs_to :user
+  belongs_to :guide, class_name: "User"
+  belongs_to :visitor, class_name: "User"
   belongs_to :tour
 
-  validates :check_in, :check_out, :date, presence: true
+  # validates :check_in, :check_out, :date, presence: true
   # status
 end

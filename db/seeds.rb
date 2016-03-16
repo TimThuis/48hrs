@@ -10,22 +10,38 @@ User.destroy_all
 Booking.destroy_all
 Tour.destroy_all
 Review.destroy_all
+Category.destroy_all
 
 puts "create user"
-
 quoc = User.create!(email: "q@email.com", password: "12345678", guide: true, first_name: "Quoc", last_name: "Bui", birthday: "1990-11-02", picture_url: "https://unsplash.it/200/200/", street: "Vondelparklaan 22", zipcode: "1234 AB", city: "Amsterdam", phone:"+31 6 1234 5678", bio: "This is me", hour_rate: 10)
 tim = User.create!(email: "tim@email.com", password: "12345678", guide: false, first_name: "Tim", last_name: "Thuis", phone:"+31 6 1234 5678")
 
-puts "create booking"
+####
 
-# first_booking = Booking.create!(user:, tour:, date:, check_in:, check_out:, status:, total_price:, hour_rate:)
+puts "create category"
+sport = Category.create!(name: "Sport", description: "Action")
+party = Category.create!(name: "Party", description: "Dancing")
+food = Category.create!(name: "Food", description: "Eating")
+bar = Category.create!(name: "Bar", description: "Drinking with friends")
+cultural = Category.create!(name: "Cultural", description: "Do some sightseeing")
+
+####
+
 puts "create tour"
+first_tour = Tour.create!(user: quoc, category: sport)
 
-# first_tour = Tour.create!(user: tim, category: "sport")
+####
+
+puts "create booking"
+first_booking = Booking.create!(visitor: tim, guide: quoc, tour: first_tour, date:"2016-1-1", check_in:"", check_out:"", status:"pending", total_price: 0, hour_rate: 0)
+
+####
+
 puts "create review"
+first_review = Review.create!(booking: first_booking ,content: "Hello this is my first review", rating: 5)
 
-# first_review = Review.create!(content: "Hello this is my first review", rating: 5)
+####
 
-puts "users, booking, tour, review created!"
+puts "users, bookings, tours, reviews, categories created!"
 
 
