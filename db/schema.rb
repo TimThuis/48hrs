@@ -52,6 +52,7 @@ ActiveRecord::Schema.define(version: 20160316102650) do
   create_table "tours", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "category_id"
+    t.text     "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

@@ -3,7 +3,7 @@ class CreateTours < ActiveRecord::Migration
     create_table :tours do |t|
       t.references :user, index: true, foreign_key: true
       t.references :category, index: true, foreign_key: true
-      # add description
+      t.text :description
       t.timestamps null: false
     end
   end
