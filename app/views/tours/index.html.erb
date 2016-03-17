@@ -3,7 +3,8 @@
 <ul>
   <% @tours.each do |tour| %>
   <li>
-  <%= tour.id %>
+  <b>id:</b> <%= tour.id %>
+  <b>description:</b> <%= tour.description %>
   </li>
   <% end %>
 </ul>
