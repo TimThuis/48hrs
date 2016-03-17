@@ -1,6 +1,7 @@
 class Account::ToursController < ApplicationController
 
   def index #view
+    # if account is guide?
   end
 
   def new #view

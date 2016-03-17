@@ -13,8 +13,10 @@ Review.destroy_all
 Category.destroy_all
 
 puts "create user"
-quoc = User.create!(email: "q@email.com", password: "12345678", guide: true, first_name: "Quoc", last_name: "Bui", birthday: "1990-11-02", picture_url: "https://unsplash.it/200/200/", street: "Vondelparklaan 22", zipcode: "1234 AB", city: "Amsterdam", phone:"+31 6 1234 5678", bio: "This is me", hour_rate: 10)
+quoc = User.create!(email: "q@email.com", password: "12345678", guide: true, first_name: "Quoc", last_name: "Bui", birthday: "1990-11-02", picture_url: "https://unsplash.it/200/200/", street: "Vondelparklaan 22", zipcode: "1234 AB", city: "Amsterdam", phone:"+31 6 1234 5678", bio: "This is Q", hour_rate: 10)
+blane = User.create!(email: "blane@email.com", password: "12345678", guide: true, first_name: "Blane", last_name: "Bmatsardji", birthday: "1992-05-21", picture_url: "https://unsplash.it/200/200/", street: "De pijp 100", zipcode: "1234 AB", city: "Amsterdam", phone:"+31 6 1234 5678", bio: "This is Blane", hour_rate: 15)
 tim = User.create!(email: "tim@email.com", password: "12345678", guide: false, first_name: "Tim", last_name: "Thuis", phone:"+31 6 1234 5678")
+andre = User.create!(email: "andre@email.com", password: "12345678", guide: false, first_name: "Andre", last_name: "Kaas", phone:"+31 6 1234 5678")
 
 ####
 
@@ -28,17 +30,25 @@ cultural = Category.create!(name: "Cultural", description: "Do some sightseeing"
 ####
 
 puts "create tour"
-first_tour = Tour.create!(user: quoc, category: sport)
+first_tour = Tour.create!(user: quoc, category: sport, description: "Sport!")
+second_tour = Tour.create!(user: quoc, category: party, description: "Party!")
+thirth_tour = Tour.create!(user: blane, category: food, description: "Food!")
+fourth_tour = Tour.create!(user: blane, category: cultural, description: "Cultural!")
 
 ####
 
 puts "create booking"
 first_booking = Booking.create!(visitor: tim, guide: quoc, tour: first_tour, date:"2016-1-1", check_in:"", check_out:"", status:"pending", total_price: 0, hour_rate: 0)
-
+second_booking = Booking.create!(visitor: tim, guide: quoc, tour: second_tour, date:"2016-1-1", check_in:"", check_out:"", status:"cancel", total_price: 0, hour_rate: 0)
+thirth_booking = Booking.create!(visitor: andre, guide: quoc, tour: thirth_tour, date:"2016-1-1", check_in:"", check_out:"", status:"confirm", total_price: 0, hour_rate: 0)
+fourth_booking = Booking.create!(visitor: andre, guide: quoc, tour: fourth_tour, date:"2016-1-1", check_in:"", check_out:"", status:"pending", total_price: 0, hour_rate: 0)
 ####
 
 puts "create review"
-first_review = Review.create!(booking: first_booking ,content: "Hello this is my first review", rating: 5)
+first_review = Review.create!(booking: first_booking ,content: "First review of Q", rating: 5)
+second_review = Review.create!(booking: second_booking ,content: "Second review of Q", rating: 5)
+thirth_review = Review.create!(booking: thirth_booking ,content: "First review of Blane", rating: 5)
+fourth_review = Review.create!(booking: fourth_booking ,content: "Second review of Blane", rating: 5)
 
 ####
 
