@@ -1,1 +1,9 @@
 <h1>Tours Index</h1>
+
+<ul>
+  <% @tours.each do |tour| %>
+  <li>
+  <%= tour.id %>
+  </li>
+  <% end %>
+</ul>
