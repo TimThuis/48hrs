@@ -1,1 +1,18 @@
-<h1>Visitor Bookings Index</h1>
+
+<div class="text-center">
+  <h1>Visitor Bookings Index</h1>
+
+  <% @bookings.each do |booking| %>
+  <div class="row">
+    <div class="col-xs-12 col-sm-12">
+      <div class="card">
+        <h4>Booking: <%= link_to booking.guide.first_name, visitor_booking_path(booking.guide) %> </h4>
+        <p><i class="fa fa-envelope-o"></i> <%= booking.guide.email %>,
+          <p><i class="fa fa-phone"></i>  <%= booking.guide.phone %></p>
+          <p>About the booking: <%= booking.check_in %> - <%= booking.check_out %></p>
+          <p>Status: <%= booking.status %></p>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
