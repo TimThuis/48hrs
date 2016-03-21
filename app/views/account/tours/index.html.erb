@@ -1,15 +1,23 @@
-<h1>Account Tours Index</h1>
+<h1>Account Tours Index of <%= @guide.first_name %></h1>
 
 <%= link_to "Add", new_account_tour_path, :class => "btn btn-success btn-sm"%>
 
+<hr>
 <ul>
   <% @tours.each do |tour| %>
   <li>
-    <b>Id:</b> <%= tour.id  %>
-    <b>Description:</b> <%= tour.description %>
-    <hr>
+    <b>Id:</b> <%= tour.id  %> |
+    <b>Category:</b>
+    <% if tour.category != nil %>
+    <%= tour.category.name %>
+    <%# raise %>
+    <% end %>
+    <i class="fa fa-info-circle"></i> <%= tour.description %>
+    <br>
     <%= link_to "edit", edit_account_tour_path(tour), :class => "btn btn-primary btn-sm"   %>
     <%= link_to "delete", account_tour_path(tour), method: :delete, data: { confirm: "Are you sure?" },  :class => "btn btn-warning btn-sm"%>
+    <hr>
   </li>
   <% end %>
 </ul>
+<%= link_to "homepage", root_path, :class => "btn btn-default btn-sm" %>
