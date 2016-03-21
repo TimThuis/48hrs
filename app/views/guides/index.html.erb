@@ -1,1 +1,10 @@
 <h1>Guides Index</h1>
+
+<ul>
+  <% @guides.each do |guide|  %>
+  <li>
+    <%= guide.id  %>
+    <%= guide.first_name %>
+  </li>
+<% end %>
+</ul>
