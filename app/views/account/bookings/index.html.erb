@@ -1,19 +1,24 @@
 <div class="index-account-bookings">
-  <h1>Guide <%= @guide.first_name %> Bookings List</h1>
-  <%= link_to "homepage", root_path, :class => "btn btn-default btn-sm" %>
+  <div class="header-account-bookings">
+    <h1>Guide <%= @guide.first_name %> Bookings List</h1>
+    <%= link_to "homepage", root_path, :class => "btn btn-default btn-sm" %>
+  </div>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12 col-sm-10 col-sm-offset-1 padded">
-        <table style="width:100%">
-          <tr>
-           <th>Client:</th>
-           <th>Phone:</th>
-           <th>Date:</th>
-           <th>Check-in:</th>
-           <th>Total Price:</th>
-           <th>Status:</th>
-           <th></th>
-         </tr>
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <table class="table table-hover table-responsive" style="width:100%">
+          <thead>
+            <tr>
+             <th>Client</th>
+             <th>Phone</th>
+             <th>Date</th>
+             <th>Check-in</th>
+             <th>Price</th>
+             <th>Status</th>
+             <th></th>
+             <th></th>
+           </tr>
+         </thead>
          <% @bookings.each do |booking| %>
          <tr>
            <td><i class="fa fa-user"></i> <%=  booking.visitor.first_name%> <%=  booking.visitor.last_name%></td>
@@ -32,28 +37,28 @@
              <span style="color:#D9534F;"><i class="fa fa-times-circle"></i> <%= booking.status  %></span>
              <% end %>
            </td>
+           <% if booking.status == "pending"  %>
            <td class= "text-right">
-             <%# if booking.status == "pending" %>
              <%= link_to "accept", accept_account_booking_path(booking), method: :patch, data: { confirm: "Are you want to change status ?" }, :class => "btn btn-success btn-sm" %>
-             <%= link_to "decline", decline_account_booking_path(booking), method: :patch, data: { confirm: "Are you sure to decline this booking ?" }, :class => "btn btn-warning btn-sm" %>
-             <%# end %>
            </td>
-           <% end %>
-         </tr>
-         <tr>
-           <th></th>
-           <th></th>
-           <th></th>
-           <th></th>
-           <th></th>
-           <th></th>
-           <th></th>
-         </tr>
-       </table>
-     </div>
+           <td class= "text-right">
+             <%= link_to "decline", decline_account_booking_path(booking), method: :patch, data: { confirm: "Are you sure to decline this booking ?" }, :class => "btn btn-warning btn-sm" %>
+           </td>
+           <% else %>
+           <td class= "text-right">
+             <button class="btn btn-default btn-sm">accept</button>
+           </td>
+           <td class= "text-right">
+           <button class="btn btn-default btn-sm">decline</button>
+         </td>
+         <% end %>
+         <% end %>
+       </tr>
+     </table>
    </div>
  </div>
+</div>
 
- <%# hours = booking.check_in - booking.check_out  %>
- <%# price = hours * booking.hour_rate %>
- <%#= price  %>
+<%# hours = booking.check_in - booking.check_out  %>
+<%# price = hours * booking.hour_rate %>
+<%#= price  %>
