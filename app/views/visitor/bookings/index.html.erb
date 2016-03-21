@@ -7,7 +7,7 @@
   <div class="row">
     <div class="col-xs-12 col-sm-12">
       <div class="card">
-        <h4>Guide: <%= booking.visitor.first_name %></h4>
+        <h4>Guide: <%= booking.guide.first_name %></h4>
         <i class="fa fa-envelope-o">
         </i> <%= booking.visitor.email %> |
         <i class="fa fa-phone">
@@ -15,12 +15,13 @@
         <i class="fa fa-calendar"></i>
         <%= booking.date %>
         <b>Category: </b>
-        <%#= booking.tour.category.name %> |
-        <b>Check-in:</b> <%= booking.check_in %>
+        <%= booking.tour.category.name %> |
+        <b>Check-in:</b> <%= l(booking.check_in, format: :hours) %>
         <br>
-        <b>Check-out:</b> <%= booking.check_out %>
+        <b>Check-out:</b> <%= l(booking.check_out, format: :hours) %>
+        <br>
         <b>Status:</b> <%= booking.status %> |
-        <b>Price:</b>
+        <b>Price:</b> <%= booking.total_price %>
         <br>
         <br>
         <%# if booking.status != 'cancel' %>

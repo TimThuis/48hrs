@@ -4,7 +4,7 @@
 <%= simple_form_for(@tour, url: account_tour_path(@tour)) do |f| %>
 <%= f.error_notification %>
 
-<%= f.select :category, @categories.map { |category| category.name } %>
+<%= f.association :category, collection: @categories , default: @tour.category_id %>
 <%= f.input :description %>
 <%= f.button :submit %>
 <%= link_to "Back", account_tours_path, :class => "btn btn-default"%>

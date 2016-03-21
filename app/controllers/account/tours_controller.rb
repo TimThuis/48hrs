@@ -55,7 +55,7 @@ class Account::ToursController < ApplicationController
   end
 
   def tour_params
-    params.require(:tour).permit(:description, :category)
+    params.require(:tour).permit(:description, :category_id)
   end
 
 end
