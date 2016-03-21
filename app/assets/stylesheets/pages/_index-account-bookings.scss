@@ -1,13 +1,13 @@
 .index-account-bookings {
-  text-align: center;
-  ul {
-  list-style-type: none;
+  h1 {
+    text-align: center;
   }
-}
-.status-align {
-  text-align: right;
-}
-.info-align {
-  text-align: left;
-  margin-bottom: 40px;
+  td {
+    padding: 10px 0;
+  }
+  th {
+    background-color: rgba(0,0,0,0.3);
+    color: white;
+    padding: 3px;
+  }
 }
