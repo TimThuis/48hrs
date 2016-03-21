@@ -1,1 +1,37 @@
-<h1>Account Bookings Index</h1>
+<h1>Guide <%= @guide.first_name %> Bookings List</h1>
+
+<ul>
+  <% @bookings.each do |booking| %>
+  <li>
+   <b>id:</b>
+   <%= booking.id %> |
+   <b>Status:</b>
+   <%= booking.status  %> |
+   <b>Client:</b>
+   <%=  booking.visitor.first_name%>
+   <%=  booking.visitor.last_name%> |
+   <i class="fa fa-phone"></i>
+   <%= booking.visitor.phone  %> |
+   <i class="fa fa-calendar"></i>
+   <%= booking.date %> |
+   <b>Check-in:</b>
+   <%= booking.check_in %> |
+   <b>Check-out:</b>
+   <%= booking.check_out %> |
+   <b>Total price:</b>
+   <%# hours = booking.check_in - booking.check_out  %>
+   <%# price = hours * booking.hour_rate %>
+   <%#= price  %>
+   <br>
+   <br>
+
+   <%# if booking.status == "pending" %>
+   <%= link_to "accept", accept_account_booking_path(booking), method: :patch, data: { confirm: "Are you want to change status ?" }, :class => "btn btn-success btn-sm" %>
+   <%= link_to "decline", decline_account_booking_path(booking), method: :patch, data: { confirm: "Are you sure to decline this booking ?" }, :class => "btn btn-warning btn-sm" %>
+   <%# end %>
+   <hr>
+ </li>
+ <% end %>
+</ul>
+
+<%= link_to "homepage", root_path, :class => "btn btn-default btn-sm" %>

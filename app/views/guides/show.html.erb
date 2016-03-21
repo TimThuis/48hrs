@@ -1,3 +1,21 @@
 <h1>Guides Show</h1>
 
 <%= @guide.first_name  %>
+
+<%= @guide.id  %> |
+<b>Guide: </b>
+<%= @guide.first_name %>
+<%= @guide.last_name %> |
+<i class="fa fa-map-marker"></i>
+<%= @guide.street %>
+<%= @guide.zipcode %>
+<%= @guide.city %> |
+<i class="fa fa-phone"></i>
+<%= @guide.phone %> |
+<i class="fa fa-info-circle"></i>
+<%= @guide.bio %> |
+<i class="fa fa-eur"></i>
+<%= @guide.hour_rate %>
+<hr>
+
+<%= link_to "homepage", guides_path, :class => "btn btn-default btn-sm" %>
