@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   end
 
   namespace :visitor do
-    resources :bookings, only: [:index, :show] do
+    resources :bookings, only: [:index] do
       member do
         patch :cancel
       end
