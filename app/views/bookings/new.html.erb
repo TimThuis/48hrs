@@ -3,8 +3,9 @@
 
 <%= simple_form_for(@booking, url: tour_bookings_path(@tour)) do |f| %>
 <%= f.error_notification %>
-<%= f.input :check_in, :input_html => {class: 'book-date'} %>
-<%= f.input :check_out, :input_html => {class: 'book-date'} %>
+<%= f.input :date %>
+<%= f.input :check_in, minute_step: 15, input_html: { class: 'book-date' } %>
+<%= f.input :check_out, minute_step: 15, input_html: { class: 'book-date' } %>
 <%= f.submit class: "btn btn-primary" %>
 <% end %>
 
