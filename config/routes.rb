@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :guides, only: [:index, :show]
 
   namespace :account do
-    resources :tours, only: [:new, :create, :edit, :update, :index]
+    resources :tours, only: [:new, :create, :edit, :update, :index, :destroy]
 
     resources :bookings, only: [:index] do
       member do
