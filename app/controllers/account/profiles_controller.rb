@@ -3,6 +3,7 @@ class Account::ProfilesController < ApplicationController
   end
 
   def edit
+    @account = current_user
   end
 
   def update

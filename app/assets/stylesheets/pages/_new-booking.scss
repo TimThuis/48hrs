@@ -1,0 +1,92 @@
+.body-form-new {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("food.jpg");
+  background-size: cover !important;
+  min-height: 100vh;
+  .header-form {
+    color: white;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+    p {
+      color: rgba(255,255,255,0.6);
+
+    }
+  }
+}
+
+.container-boeking {
+  background-color: white;
+  box-shadow: 4px 7px 3px rgba(0,0,0,0.1);
+  border-radius: 7px;
+  position: relative;
+  padding-top: 25px;
+  h2 {
+    font-size: 20px;
+  }
+}
+
+.guide-photo {
+  height: 80px;
+  border-radius: 999px;
+  border: 3px solid white;
+  position: absolute;
+  top: -40px;
+  right: 50%;
+  margin-right: -40px;
+}
+
+.stars {
+  position: absolute;
+  top: -35px;
+  right: 50%;
+  margin-right: -135px;
+  color: #f0ad4e;
+}
+
+.form {
+  padding: 30px;
+  padding-top: 0;
+}
+
+.price {
+  background-color: #f0ad4e;
+  height: 40px;
+  width: 40px;
+  border-radius: 999px;
+  // border: 3px solid white;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  margin-left: -50px;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+  line-height: 260%;
+}
+
+#booking_check_out_4i {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#booking_check_out_5i {
+  flex: 1;
+  margin-left: 10px;
+}
+
+#booking_check_in_4i {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#booking_check_in_5i {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.form-inline {
+  display: flex;
+  align-items: center;
+  margin: 0 0px;
+}
