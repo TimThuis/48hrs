@@ -4,7 +4,6 @@
  * ------------------------------------- */
  body {
   position: relative;
-  display: flex;
 }
 .background {
  min-width: 100%;
@@ -16,6 +15,7 @@
 }
 
 .banner-content {
+  height: 50%;
   color: white;
   justify-content: space-around;
   align-items: center;
