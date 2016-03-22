@@ -1,15 +1,49 @@
-<h1>Booking New</h1>
-
-
-<%= simple_form_for(@booking, url: tour_bookings_path(@tour)) do |f| %>
-<%= f.error_notification %>
-<%= f.input :date %>
-<%= f.input :check_in, minute_step: 15, input_html: { class: 'book-date' } %>
-<%= f.input :check_out, minute_step: 15, input_html: { class: 'book-date' } %>
-<%= f.submit class: "btn btn-primary" %>
-<% end %>
-
-<hr>
-
-<%= link_to "Homepage", root_path, :class => "btn btn-default" %>
-<%= link_to "Tours", tours_path, :class => "btn btn-default" %>
+<div class="body-form-new">
+  <div class="container">
+    <div class="row">
+      <div class="header-form">
+        <h1>Book your guide <b><%= @tour.user.first_name  %> !</b></h1>
+        <p>In the category <%= @tour.category.name  %></p>
+        <br>
+        <div class="header-line-white"></div>
+      </div>
+      <div class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4 padded">
+        <div class="container-boeking">
+          <div class="guide text-center">
+            <h2>- <%= @tour.user.first_name %> <%= @tour.user.last_name %> -</h2>
+            <div class="price">€<%= @tour.user.hour_rate  %></div>
+            <%= link_to guide_path(@tour.user) do %>
+              <%= image_tag "guide_1.jpg", class: "guide-photo" %>
+            <% end %>
+            <div class="stars">
+              <% 3.times do %>
+              <i class="fa fa-star"></i>
+              <% end %>
+              <% 2.times do %>
+              <i class="fa fa-star-o"></i>
+              <% end %>
+            </div>
+            <hr>
+          </div>
+          <div class="form">
+            <%= simple_form_for(@booking, url: tour_bookings_path(@tour)) do |f| %>
+            <%= f.error_notification %>
+            <%= f.input :date %>
+            <div class="dates">
+              <%= f.input :check_in, minute_step: 15, input_html: { class: 'book-date' } %>
+              <%= f.input :check_out, minute_step: 15, input_html: { class: 'book-date' } %>
+            </div>
+            <%= f.submit class: "btn btn-primary" %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4 text-center">
+        <%= link_to "Homepage", root_path, :class => "button-photo" %>
+        <%= link_to "Tours", tours_path, :class => "button-photo" %>
+      </div>
+    </div>
+  </div>
+</div>

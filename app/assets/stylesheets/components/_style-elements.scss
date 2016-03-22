@@ -2,6 +2,32 @@
   height: 3px;
   width: 80px;
   background-color: black;
+  margin-bottom: 30px;
+  margin-top: 15px;
   margin: 0 auto 30px auto;
+}
+
+.header-line-white {
+  height: 3px;
+  width: 80px;
+  background-color: rgba(255,255,255,0.4);
+  margin-bottom: 30px;
+  margin-top: 15px;
+  margin: 0 auto 30px auto;
+}
+
+.button-photo {
+  border: 2px solid white;
+  color: white;
+  padding: 5px 8px;
+  margin: 5px 10px;
+  background-color: rgba(0,0,0,0.2);
+  text-transform: uppercase;
+}
+
+.button-photo:hover {
+  color: white;
+  text-decoration: none;
+  transition: background-color 600ms ease;
 }
 

@@ -1,7 +1,34 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12">
-      <h1>Edit my profile</h1>
+<div class="container-profile-edit-account">
+  <div class="container padded">
+    <div class="row">
+      <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+        <div class="container-edit-profile">
+          <h1><b><%= @current_user.first_name %></b> add info</h1>
+          <p>Make your profile compleet so guest can find you! So we can start your personal adventures.</p>
+          <div class="header-line"></div>
+        </div>
+        <%= simple_form_for @account, url: edit_account_profile_path do |f| %>
+        <%= f.error_notification %>
+        <%= f.input :email %>
+        <%= f.input :phone %>
+        <%= f.input :first_name %>
+        <%= f.input :last_name %>
+        <hr>
+        <%= f.input :street %>
+        <%= f.input :zipcode %>
+        <%= f.input :city %>
+        <%= f.input :birthday %>
+        <%#= f.input :picture_cache, as: :hidden %>
+        <hr>
+        <%= f.input :picture_url, label: 'Profile Picture' %>
+        <%= f.input :bio %>
+        <%= f.input :hour_rate %>
+        <hr>
+        <%= f.submit class: "btn btn-primary" %>
+        <%= link_to "Homepage", root_path, :class => "btn btn-default" %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
