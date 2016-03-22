@@ -1,6 +1,6 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <%= link_to new_user_session_path, class: "navbar-wagon-brand" do %>  
+  <%= link_to new_user_session_path, class: "navbar-wagon-brand" do %>
   <%= image_tag "my48.svg" %>
   <% end %>
 
@@ -37,7 +37,12 @@
             <% end %>
           </li>
           <li>
-            <%= link_to "#" do %>
+            <%= link_to account_bookings_path do %>
+            <i class="fa fa-book"></i>  <%= t ".profile", default: "Bookings" %>
+            <% end %>
+          </li>
+          <li>
+          <%= link_to root_path do %>
             <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
             <% end %>
           </li>
