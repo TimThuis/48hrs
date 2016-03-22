@@ -30,3 +30,22 @@
   transition: background-color 600ms ease;
 }
 
+.cube {
+  background-color: white;
+  height: 50px;
+  width: 50px;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -25px;
+  right: 50%;
+  margin-right: -25px;
+  h2 {
+    transform: rotate(-45deg);
+    color: black;
+    font-size: 30px;
+    text-align: center;
+    line-height: 8%;
+    font-weight: bold;
+  }
+}
+
