@@ -45,6 +45,7 @@
   flex: 0 1 auto;
   cursor: pointer;
   padding: 0 20px;
+  z-index: 999;
 }
 
 /* Navbar standard link */
@@ -143,4 +144,20 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.note-bullit {
+  // transform: rotate(45deg);
+  border-radius: 999px;
+  height: 18px;
+  width: 18px;
+  background-color: #F0AD4E;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 150%;
+  position: absolute;
+  top: -4px;
+  right: -4px;
 }
