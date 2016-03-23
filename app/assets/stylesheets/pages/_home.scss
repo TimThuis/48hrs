@@ -1,4 +1,25 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+ body {
+  position: relative;
+}
+
+.banner-content {
+  background-image: url("48hrs_background.png");
+  z-index: -1;
+  // position: fixed;
+  top: 0;
+  background-size: cover !important;
+  height: 100vh;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  h1 {
+    text-transform: uppercase;
+  }
+}
+
+.title-container {
+  max-width: 250px;
+  position: absolute;
+  top: 60vh;
+}

@@ -1,1 +1,65 @@
-<h1>Account Bookings Index</h1>
+<div class="index-account-bookings">
+  <div class="header-account-bookings">
+    <h1><b><%= @guide.first_name %>'s</b> Bookings</h1>
+    <div class="header-line"></div>
+    <%= link_to "homepage", root_path, :class => "btn btn-default btn-sm" %>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+        <table class="table table-hover table-responsive" style="width:100%">
+          <thead>
+            <tr>
+             <th>Client</th>
+             <th>Phone</th>
+             <th>Date</th>
+             <th>Check-in</th>
+             <th>Price</th>
+             <th>Status</th>
+             <th></th>
+             <th></th>
+           </tr>
+         </thead>
+         <% @bookings.each do |booking| %>
+         <tr>
+           <td><i class="fa fa-user"></i> <%=  booking.visitor.first_name%> <%=  booking.visitor.last_name%></td>
+           <td><i class="fa fa-phone"></i> <%= booking.visitor.phone  %></td>
+           <td><i class="fa fa-calendar"></i> <%= booking.date %></td>
+           <td><i class="fa fa-clock-o"></i> <%= booking.check_in %></td>
+           <td><i class="fa fa-eur"></i> <%= booking.guide.hour_rate %></td>
+           <td>
+             <% if booking.status == "pending" %>
+             <span style="color:#E67E22;"><i class="fa fa-pause-circle"></i></i> <%= booking.status  %></span>
+             <% elsif booking.status == "accepted" %>
+             <span style="color:#278F75;"><i class="fa fa-check-circle"></i> <%= booking.status  %></span>
+             <% elsif booking.status == "confirm" %>
+             <span style="color:#278F75;"><i class="fa fa-check-circle"></i> <%= booking.status  %></span>
+             <% else %>
+             <span style="color:#D9534F;"><i class="fa fa-times-circle"></i> <%= booking.status  %></span>
+             <% end %>
+           </td>
+           <% if booking.status == "pending"  %>
+           <td class= "text-right">
+             <%= link_to "accept", accept_account_booking_path(booking), method: :patch, data: { confirm: "Are you want to change status ?" }, :class => "btn btn-success btn-sm" %>
+           </td>
+           <td class= "text-right">
+             <%= link_to "decline", decline_account_booking_path(booking), method: :patch, data: { confirm: "Are you sure to decline this booking ?" }, :class => "btn btn-warning btn-sm" %>
+           </td>
+           <% else %>
+           <td class= "text-right">
+             <button class="btn btn-default btn-sm">accept</button>
+           </td>
+           <td class= "text-right">
+           <button class="btn btn-default btn-sm">decline</button>
+         </td>
+         <% end %>
+         <% end %>
+       </tr>
+     </table>
+   </div>
+ </div>
+</div>
+
+<%# hours = booking.check_in - booking.check_out  %>
+<%# price = hours * booking.hour_rate %>
+<%#= price  %>

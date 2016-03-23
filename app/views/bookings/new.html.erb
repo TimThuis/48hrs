@@ -1,9 +1,23 @@
-<h1>Booking New</h1>
+<div class="body-form-new">
 
+  <% if @tour.category.name == "Food" %>
+  <div class="banner-photo-food">
+    <%= render "shared/navbarspace" %>
+    <%= render "bookings/newlayout" %>
+    <%= render "shared/footerspace" %>
+  </div>
 
-<%= simple_form_for(@booking, url: tour_bookings_path(@tour)) do |f| %>
-<%= f.error_notification %>
-<%= f.input :check_in, :input_html => {class: 'book-date'} %>
-<%= f.input :check_out, :input_html => {class: 'book-date'} %>
-<%= f.submit class: "btn btn-primary" %>
-<% end %>
+  <% elsif @tour.category.name == "Sport" %>
+  <div class="banner-photo-sport">
+    <%= render "shared/navbarspace" %>
+    <%= render "bookings/newlayout" %>
+  </div>
+
+  <% elsif @tour.category.name == "Party" %>
+  <div class="banner-photo-sport">
+    <%= render "shared/navbarspace" %>
+    <%= render "bookings/newlayout" %>
+  </div>
+
+  <% end %>
+</div>

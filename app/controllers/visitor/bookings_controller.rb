@@ -4,6 +4,7 @@ class Visitor::BookingsController < ApplicationController
   def index #view
     if user_signed_in?
       @bookings = current_user.trips
+      @visitor = current_user
       # @bookings = current_user.trips.reject do |booking|
       #   booking.status == 'cancel'
       # end
