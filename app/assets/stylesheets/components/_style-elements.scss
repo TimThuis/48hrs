@@ -17,17 +17,19 @@
 }
 
 .button-photo {
-  border: 2px solid white;
+  border: 0.5px solid white;
   color: white;
-  padding: 5px 8px;
+  padding: 10px 20px;
   margin: 10px 10px;
   text-transform: uppercase;
+  font-size: 12px;
 }
 
 .button-photo:hover {
-  color: white;
+  color: black;
+  background-color: white;
   text-decoration: none;
-  transition: background-color 600ms ease;
+  // transition: background-color 600ms ease;
 }
 
 .cube {
@@ -49,3 +51,10 @@
   }
 }
 
+.space-navbar {
+  height: 100px;
+}
+
+.space-footer {
+  height: 100px;
+}
