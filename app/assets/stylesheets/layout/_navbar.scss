@@ -17,6 +17,7 @@
   justify-content: space-between;
   position: fixed;
   width: 100%;
+  z-index: 1;
 }
 
 /* Optional class to fix the navbar on top */
@@ -47,6 +48,11 @@
   cursor: pointer;
   padding: 0 20px;
   z-index: 999;
+}
+
+.navbar-wagon-item:focus {
+  color: #F7DB61;
+  text-decoration: none;
 }
 
 /* Navbar standard link */
@@ -80,6 +86,12 @@
   color: black;
   background: white;
   border-color: white;
+}
+
+.navbar-wagon-button:focus {
+  color: white;
+  background: #F7DB61;
+  border-color: #F7DB61;
 }
 
 // /* Navbar search form */

@@ -4,7 +4,7 @@
 
 .banner-content {
   background-image: url("48hrs_background.png");
-  z-index: -1;
+  // z-index: -1;
   // position: fixed;
   top: 0;
   background-size: cover !important;
@@ -15,11 +15,35 @@
   position: relative;
   h1 {
     text-transform: uppercase;
+    font-family: 'Roboto Condensed', "sans-serif";
+    font-size: 70px;
+    letter-spacing: 2px;
+    line-height: 80px;
   }
 }
 
 .title-container {
-  max-width: 250px;
+  max-width: 345px;
   position: absolute;
-  top: 60vh;
+  top: 30vh;
+  left: 10vh;
+}
+
+.category-button {
+  margin-left: 10px;
+  padding: 0 20px;
+  line-height: 35px;
+  background-color: transparent;
+  color: white;
+  font-size: 16px;
+  border: 0.5px solid white;
+  border-radius: 0px;
+  text-transform: uppercase;
+}
+
+.category-button:hover {
+  color: black;
+  background: white;
+  border-color: white;
+  text-decoration: none;
 }
