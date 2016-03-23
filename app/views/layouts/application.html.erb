@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>TODO</title>
-    <%= csrf_meta_tags %>
+<head>
+<title>48hrs - Your Journey</title>
+  <%= csrf_meta_tags %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <%= stylesheet_link_tag    'application', media: 'all' %>
-  </head>
-  <body>
-    <%= render 'shared/navbar' %>
-    <%= render 'shared/flashes' %>
-    <%= yield %>
-    <%= render 'shared/footer'%>
-    <%= javascript_include_tag 'application' %>
-  </body>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+</head>
+<body>
+  <%= render 'shared/flashes' %>
+  <%= render 'shared/navbar' %>
+  <%= yield %>
+  <%= javascript_include_tag 'application' %>
+</body>
 </html>

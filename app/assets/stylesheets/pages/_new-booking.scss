@@ -1,7 +1,4 @@
 .body-form-new {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("food.jpg");
-  background-size: cover !important;
-  min-height: 100vh;
   .header-form {
     color: white;
     text-align: center;
@@ -9,9 +6,28 @@
     padding-top: 20px;
     p {
       color: rgba(255,255,255,0.6);
+      // text-transform: uppercase;
 
     }
   }
+}
+
+.banner-photo {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("default-category.jpg");
+  background-size: cover !important;
+  min-height: 100vh;
+}
+
+.banner-photo-food {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("food.jpg");
+}
+
+.banner-photo-sport {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("active.jpg");
+}
+
+.banner-photo-party {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("party.jpg");
 }
 
 .container-boeking {
@@ -63,6 +79,20 @@
   color: white;
   font-size: 15px;
   line-height: 260%;
+}
+
+#booking_date_1i {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#booking_date_2i {
+  flex: 1;
+  margin-right: 10px;
+}
+
+#booking_date_3i {
+  flex: 1;
 }
 
 #booking_check_out_4i {
