@@ -1,10 +1,19 @@
 .wrapper-tours {
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0, 0.6)),url("travel.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0, 0.8)),url("travel.jpg");
   background-size: cover !important;
+  position: relative;
   height: 100vh;
+  .background-white {
+    positionn: absolute;
+
+  }
   h1 {
     color: white;
   }
+}
+
+h1 {
+  margin-bottom: 40px;
 }
 
 .tours-container {
@@ -75,7 +84,7 @@
 
 .card-profile {
   display:flex;
-  background-color: white;
+  background-color: #3C3838;
   img {
     width: 110px;
     align-self: center;
@@ -88,7 +97,7 @@
     p.card-name {
       font-weight: 600;
       a {
-        color: #2AC2F1;
+        color: $yellow-own;
       // color: black;
       }
     }
@@ -138,8 +147,8 @@
       align-self: stretch;
       display: flex;
       align-items: center;
-      background: white;
-      color: #2AC2F1;
+      background: #423E3E;
+      color: $yellow-own;
       flex: 0 0 60px;
       justify-content: center;
     }
@@ -154,7 +163,7 @@
   border-right: 10px solid transparent;
   border-bottom: 10px solid #F6F6F6;
   position: absolute;
-  bottom: 83px;
+  top: 100px;
   left: 44px
 }
 .card-padding {
