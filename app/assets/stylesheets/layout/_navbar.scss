@@ -48,6 +48,11 @@
   padding: 0 20px;
 }
 
+.navbar-wagon-item:focus {
+  color: #F7DB61;
+  text-decoration: none;
+}
+
 /* Navbar standard link */
 .navbar-wagon-link {
   color: #d6d6d6;
@@ -79,6 +84,12 @@
   color: black;
   background: white;
   border-color: white;
+}
+
+.navbar-wagon-button:focus {
+  color: white;
+  background: #F7DB61;
+  border-color: #F7DB61;
 }
 
 // /* Navbar search form */
