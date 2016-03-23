@@ -14,12 +14,12 @@
           </div>
 
           <div class="form-actions">
-            <%= f.button :submit, "Log in" %>
+            <%= f.button :submit, "Log in", class: "btn btn-primary" %>
           </div>
           <% end %>
         </div>
           <%= link_to "Join Us!", new_user_registration_path, {:class=> "sign-up-link"} %>
-          <%= link_to "Forgot Password?", new_user_registration_path, {:class=> "password-link"} %>
+          <%= link_to "Forgot Password?", new_user_password_path, {:class=> "password-link"} %>
       </div>
     </div>
   </div>
