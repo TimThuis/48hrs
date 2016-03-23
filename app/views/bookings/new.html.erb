@@ -1,23 +1,7 @@
 <div class="body-form-new">
-
-  <% if @tour.category.name == "Food" %>
-  <div class="banner-photo-food">
+  <div class="<%= tour_banner_css_class(@tour) %>">
     <%= render "shared/navbarspace" %>
     <%= render "bookings/newlayout" %>
     <%= render "shared/footerspace" %>
   </div>
-
-  <% elsif @tour.category.name == "Sport" %>
-  <div class="banner-photo-sport">
-    <%= render "shared/navbarspace" %>
-    <%= render "bookings/newlayout" %>
-  </div>
-
-  <% elsif @tour.category.name == "Party" %>
-  <div class="banner-photo-sport">
-    <%= render "shared/navbarspace" %>
-    <%= render "bookings/newlayout" %>
-  </div>
-
-  <% end %>
 </div>
