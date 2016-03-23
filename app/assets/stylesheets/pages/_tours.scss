@@ -1,3 +1,11 @@
+.wrapper-tours {
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0, 0.6)),url("travel.jpg");
+  background-size: cover !important;
+  height: 100vh;
+  h1 {
+    color: white;
+  }
+}
 
 .tours-container {
   display: flex;
@@ -27,7 +35,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    color: white;
+    color: black;
     font-weight: 600;
     z-index: 1;
     display: flex;
@@ -44,9 +52,9 @@
     opacity: 0;
     z-index: 2;
     &:hover {
-       opacity: 0.5;
-    }
-  }
+     opacity: 0.5;
+   }
+ }
 }
 
 .flex-1 {
@@ -81,6 +89,7 @@
       font-weight: 600;
       a {
         color: #2AC2F1;
+      // color: black;
       }
     }
     p.card-rating {
