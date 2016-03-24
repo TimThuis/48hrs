@@ -19,6 +19,9 @@
         <% end %>
       </div>
       <%= link_to "Login!", new_user_session_path, {:class=> "login-link"} %>
+
+      <%#= link_to "facebook", omniauth_authorize_path(resource_name, provider) %>
+      <%= render "devise/shared/links" %>
     </div>
   </div>
 </div>

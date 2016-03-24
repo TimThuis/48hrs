@@ -1,64 +1,38 @@
 <div class="navbar-wagon">
   <!-- Logo -->
   <% if user_signed_in? %>
-    <%= link_to root_path, class: "navbar-wagon-brand" do %>
-      <%= image_tag "my48.svg", class: "logo-my48" %>
+    <div>
+      <%= link_to root_path, class: "navbar-wagon-brand" do %>
+        <%= image_tag "48hrs_logo_white.svg", class: "logo-my48" %>
+          <div class="note-bullit">
+            <% if current_user.guide == true %>
+              <%= current_user.requests.length %>
+            <% else %>
+              <%= current_user.tours.length %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    <% else %>
+      <%= link_to new_user_session_path, class: "navbar-wagon-brand" do %>
+        <%= image_tag "48hrs_logo_white.svg", class: "logo-my48" %>
+      <% end %>
     <% end %>
-  <% else %>
-    <%= link_to new_user_session_path, class: "navbar-wagon-brand" do %>
-      <%= image_tag "48hrs_logo_white.svg", class: "logo-my48" %>
-    <% end %>
-  <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
+    <%= link_to t(".sign_in", default: "ABOUT"), root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to t(".sign_in", default: "HOW IT WORKS"), root_path, class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to t(".sign_in", default: "EPIC STORIES"), root_path , class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
 
     <!-- Profile picture and dropdown -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <%= image_tag "guide_2.jpg", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-        <div class="note-bullit">
-          <% if current_user.guide == true %>
-          <%= current_user.requests.length %>
-          <% else %>
-          <%= current_user.tours.length %>
-          <% end %>
-        </div>
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <% if current_user.guide == true %>
-          <li>
-            <%= link_to account_profile_path do %>
-            <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>
-            <% end %>
-          </li>
-          <% end %>
-          <li>
-            <%= link_to account_bookings_path do %>
-            <i class="fa fa-book"></i>  <%= t ".profile", default: "Bookings" %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to root_path do %>
-            <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to destroy_user_session_path, method: :delete do %>
-            <i class="fa fa-sign-out"></i>  <%= t ".sign_out", default: "Log out" %>
-            <% end %>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <%= render "shared/navbarmenu"  %>
 
     <% else %>
     <!-- Login text link -->
-    <%= link_to t(".sign_in", default: "ABOUT"), root_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to t(".sign_in", default: "HOW IT WORKS"), root_path, class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to t(".sign_in", default: "EPIC STORIES"), root_path , class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to t(".top_call_to_action", default: "BECOME A GUIDE"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
     <% end %>
   </div>

@@ -7,7 +7,7 @@
           <p>Make your profile compleet so guest can find you! So we can start your personal adventures.</p>
           <div class="header-line"></div>
         </div>
-        <%= simple_form_for @account, url: edit_account_profile_path do |f| %>
+        <%= simple_form_for @account, url: account_profile_path do |f| %>
         <%= f.error_notification %>
         <%= f.input :email %>
         <%= f.input :phone %>
@@ -18,18 +18,19 @@
         <%= f.input :zipcode %>
         <%= f.input :city %>
         <%= f.input :birthday %>
-        <%#= f.input :picture_cache, as: :hidden %>
         <hr>
-        <%= f.input :picture_url, label: 'Profile Picture' %>
+        <%= f.input :photo, label: 'Profile Picture' %>
+        <%= cl_image_tag current_user.photo, height: 150, width: 150, crop: :fill, :radius => :max, class: "profile-page-photo" %>
+        <%= f.input :photo_cache, as: :hidden %>
         <%= f.input :bio %>
         <%= f.input :hour_rate %>
         <hr>
         <%= f.submit class: "btn btn-primary" %>
-        <%= link_to "Profile", account_profile_path, :class => "btn btn-default" %>
-        <%= link_to "Homepage", root_path, :class => "btn btn-default" %>
         <% end %>
       </div>
     </div>
   </div>
 </div>
 
+<%#= link_to "Profile", account_profile_path, :class => "btn btn-default" %>
+<%#= link_to "Homepage", root_path, :class => "btn btn-default" %>

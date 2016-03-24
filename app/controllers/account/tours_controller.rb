@@ -33,11 +33,11 @@ class Account::ToursController < ApplicationController
     @tour.update(tour_params)
     @tour.user = current_user
 
-    if @tour.save
+    if @tour.save!
       flash[:notice] = "Succesfully updated your tour"
       redirect_to(account_tours_path)
     else
-      flash[:alert] = "Please make sure you fill in the field"
+      flash[:alert] = "Please make sure you fill in the fields"
       render :edit
     end
   end
