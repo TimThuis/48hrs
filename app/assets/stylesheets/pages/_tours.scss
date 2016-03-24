@@ -1,3 +1,20 @@
+.wrapper-tours {
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0, 0.6)),url("travel.jpg");
+  background-size: cover !important;
+  position: relative;
+  height: 45vh;
+  .background-white {
+    positionn: absolute;
+
+  }
+  h1 {
+    color: white;
+  }
+}
+
+h1 {
+  margin-bottom: 40px;
+}
 
 .tours-container {
   display: flex;
@@ -27,7 +44,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    color: white;
+    color: black;
     font-weight: 600;
     z-index: 1;
     display: flex;
@@ -44,9 +61,9 @@
     opacity: 0;
     z-index: 2;
     &:hover {
-       opacity: 0.5;
-    }
-  }
+     opacity: 0.5;
+   }
+ }
 }
 
 .flex-1 {
@@ -67,7 +84,7 @@
 
 .card-profile {
   display:flex;
-  background-color: white;
+  background-color: #3C3838;
   img {
     width: 110px;
     align-self: center;
@@ -80,118 +97,129 @@
     p.card-name {
       font-weight: 600;
       a {
-        color: #2AC2F1;
-      }
-    }
-    p.card-rating {
-      color: #DEDFE1;
+        color: $yellow-own;
+      // color: black;
     }
   }
+  p.card-rating {
+    color: #DEDFE1;
+  }
+}
 
-  .card-action-icons {
+.card-action-icons {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  .card-action {
     display: flex;
-    flex-flow: column;
-    flex: 1;
-    .card-action {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex: 0 0 29%;
-      a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex: 0 0 30%;
-        i {
-          font-size: 20px;
-        }
-      }
-    }
-  }
-
-  .card-action-icons > .card-action {
-    flex: 1;
-  }
-
-  .card-action-icons {
-    justify-content: center;
     align-items: center;
-    display: flex;
-  }
-
-  .card-booking {
-    flex: 0 0 50px;
-    display: flex;
     justify-content: center;
-    align-items: center;
+    flex: 0 0 29%;
     a {
-      box-shadow: 0 1px 2px rgba(0,0,0,0.07);
-      align-self: stretch;
       display: flex;
-      align-items: center;
-      background: white;
-      color: #2AC2F1;
-      flex: 0 0 60px;
       justify-content: center;
+      align-items: center;
+      flex: 0 0 30%;
+      i {
+        font-size: 20px;
+      }
     }
-
   }
 }
-
-.card-position > .arrow-up {
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #F6F6F6;
-  position: absolute;
-  bottom: 83px;
-  left: 44px
-}
-.card-padding {
-  padding: 20px 20px 10px 20px;
-  background-color: #F6F6F6;
-  margin-bottom: 40px;
 }
 
-.card-padding > p {
-  font-size: 15px;
-}
-
-
-@media all and (min-width: 1150px) and (max-width: 1300px) {
-
-  .category-cards > .category-item {
-    width: 150px;
-  }
-}
-
-@media all and (min-width: 0px) and (max-width: 1149px) {
-
- .add-media-flex {
+.card-action-icons > .card-action {
   flex: 1;
 }
 
-.category-cards {
-  flex-direction: column;
-  flex: 0 0 150px;
-  max-width: 600px;
-  width: 100%;
+.card-action-icons {
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
-.tours-container {
-  display: block;
-}
+.card-booking {
+  flex: 0 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    background: #423E3E;
+    color: $yellow-own;
+    flex: 0 0 60px;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 1;
+    -webkit-transition: all ease 300ms;
+    -moz-transition: all ease 300ms;
+    -ms-transition: all ease 300ms;
+    -o-transition: all ease 300ms;
+    transition: all ease 300ms;
+      &:hover {
+        font-size: 18px;
+        opacity: 0.5;
+      }
+    }
+  }
 
-.category-cards {
-  margin: 0 auto;
-  flex-direction: row;
-  margin-bottom: 40px;
-}
+  .card-position > .arrow-up {
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #F6F6F6;
+    position: absolute;
+    top: 100px;
+    left: 44px
+  }
+  .card-padding {
+    padding: 20px 20px 10px 20px;
+    background-color: #F6F6F6;
+    margin-bottom: 40px;
+  }
 
-.category-cards > .category-item {
-  flex: 0 0  50%;
-}
+  .card-padding > p {
+    font-size: 15px;
+  }
+
+
+  @media all and (min-width: 1150px) and (max-width: 1300px) {
+
+    .category-cards > .category-item {
+      width: 150px;
+    }
+  }
+
+  @media all and (min-width: 0px) and (max-width: 1149px) {
+
+   .add-media-flex {
+    flex: 1;
+  }
+
+  .category-cards {
+    flex-direction: column;
+    flex: 0 0 150px;
+    max-width: 600px;
+    width: 100%;
+  }
+
+  .tours-container {
+    display: block;
+  }
+
+  .category-cards {
+    margin: 0 auto;
+    flex-direction: row;
+    margin-bottom: 40px;
+  }
+
+  .category-cards > .category-item {
+    flex: 0 0  50%;
+  }
 }
 
 @media all and (min-width: 0px) and (max-width: 725px) {
