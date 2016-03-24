@@ -1,44 +1,64 @@
 <div class="container-profile-edit-account">
+<%= render "shared/navbarspace"  %>
   <div class="container padded">
     <div class="row">
       <div class="col-xs-12 col-sm-4 col-sm-offset-4">
         <div class="container-edit-profile">
+          <% if current_user.provider %>
+            <%= image_tag current_user.picture, class: "profile-page-photo" %>
+          <% else %>
+            <%= cl_image_tag current_user.photo, height: 100, width: 100, crop: :fill, :radius => :max, class: "profile-page-photo" %>
+          <% end %>
           <h1><b><%= current_user.first_name %></b> profile page</h1>
           <p>This is your own personal space, check if the information is correct so visitor's will go on a adventure with you !</p>
           <div class="header-line"></div>
-          <div class="account-info">
-            <h2>Basic</h2>
-            <p> <%= current_user.first_name %>
-              <%= current_user.last_name %></p>
-              <p><i class="fa fa-birthday-cake"></i>
-                <%= current_user.birthday %></p>
-                <hr>
-                <h2>Contact</h2>
-                <p><i class="fa fa-phone"></i>
-                  <%= current_user.phone %></p>
-                  <p><i class="fa fa-envelope"></i>
-                    <%= current_user.email %></p>
-                    <hr>
-                    <h2>Address</h2>
-                    <p><i class="fa fa-location-arrow">
-                    </i> <%= current_user.street %>,
-                    <%= current_user.zipcode %>,
-                    <%= current_user.city %> (NL)</p>
-                    <hr>
-                    <h2>History</h2>
-                    <p><i class="fa fa-file-text-o"></i>
-                      <%= current_user.bio %></p>
-                      <hr>
-                      <h2>Business</h2>
-                      <p><i class="fa fa-eur"></i>
-                        <%= current_user.hour_rate %></p>
-                      </div>
-                      <div class="button-links">
-                        <%= link_to "edit", edit_account_profile_path, class: "btn btn-primary"  %>
-                        <%= link_to "Homepage", root_path, :class => "btn btn-default" %>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        </div>
+        <div class="account-info">
+          <h2>Basic</h2>
+          <p>
+            <%= current_user.first_name %>
+            <%= current_user.last_name %>
+          </p>
+          <p>
+            <i class="fa fa-birthday-cake"></i>
+            <%= current_user.birthday %>
+          </p>
+          <hr>
+          <h2>Contact</h2>
+          <p>
+            <i class="fa fa-phone"></i>
+            <%= current_user.phone %>
+          </p>
+          <p>
+            <i class="fa fa-envelope"></i>
+            <%= current_user.email %>
+          </p>
+          <hr>
+          <h2>Address</h2>
+          <p>
+            <i class="fa fa-location-arrow">
+            </i> <%= current_user.street %>,
+            <%= current_user.zipcode %>,
+            <%= current_user.city %> (NL)
+          </p>
+          <hr>
+          <h2>History</h2>
+          <p>
+            <i class="fa fa-file-text-o"></i>
+            <%= current_user.bio %>
+          </p>
+          <hr>
+          <h2>Business</h2>
+          <p>
+            <i class="fa fa-eur"></i>
+            <%= current_user.hour_rate %>
+          </p>
+        </div>
+        <div class="button-links">
+          <%= link_to "edit", edit_account_profile_path, class: "btn btn-primary"  %>
+          <%= link_to "Homepage", root_path, :class => "btn btn-default" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
