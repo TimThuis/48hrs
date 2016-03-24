@@ -1,14 +1,29 @@
-<div class="banner-content">
-  <div class="container">
+<div class="banner">
+  <%= render "shared/navbarspace" %>
+  <div class="banner-container center-block">
+    <%= image_tag("48hrs_logo_white", :class => "banner-logo img-responsive") %>
+    <h1>to be one of the locals</h1>
+    <%= link_to "start adventure", tours_path, { :class=>"category-button btn"} %>
+  </div>
+</div>
+
+<div class="howitworks">
+  <div class="howitworks-container center-block">
     <div class="row">
-      <div class="col-xs-12">
-        <div class="title-container">
-          <div>
-          <h1>What are your next 48hrs</h1>
-          </div>
-          <%= link_to "categories", tours_path, { :class=>"category-button btn"} %>
-        </div>
-      </div>
-    </div>
+  <div class="col-md-6">choose category</div>
+  <div class="col-md-6"><img src="http://placehold.it/350x350"></div>
+</div>
+<div class="row">
+  <div class="col-md-6"><img src="http://placehold.it/350x350"></div>
+  <div class="col-md-6">choose guide</div>
+</div>
+<div class="row">
+  <div class="col-md-6">contact guide</div>
+  <div class="col-md-6"><img src="http://placehold.it/350x350"></div>
+</div>
+<div class="row">
+  <div class="col-md-6"><img src="http://placehold.it/350x350"></div>
+  <div class="col-md-6">created awesome journey</div>
+</div>
   </div>
 </div>

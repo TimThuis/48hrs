@@ -2,7 +2,9 @@
   position: relative;
 }
 
-.banner-content {
+// banner
+
+.banner {
   background-image: url("roofgarden.png");
   // z-index: -1;
   // position: fixed;
@@ -16,29 +18,47 @@
   h1 {
     text-transform: uppercase;
     font-family: 'Roboto Condensed', "sans-serif";
-    font-size: 70px;
-    letter-spacing: 2px;
-    line-height: 80px;
+    font-size: 35px;
+    letter-spacing: 5px;
+    // line-height: 80px;
+    text-align: center;
+    margin-top: 44px;
   }
 }
 
-.title-container {
-  max-width: 345px;
-  position: absolute;
-  top: 30vh;
-  left: 10vh;
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.banner-container {
+  // position: absolute;
+  max-height: 300px;
+  margin: 0 auto;
+}
+
+.banner-logo {
+  height: 350px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// button
+
 .category-button {
-  margin-left: 10px;
+  background-color: transparent;
   padding: 0 20px;
   line-height: 35px;
-  background-color: transparent;
   color: white;
   font-size: 16px;
   border: 0.5px solid white;
   border-radius: 0px;
   text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
 }
 
 .category-button:hover {
@@ -46,4 +66,14 @@
   background: white;
   border-color: white;
   text-decoration: none;
+}
+
+.category-button:focus {
+  background-color: goldenrod;
+  color: white;
+  border-color: goldenrod;
+}
+
+.howitworks-container {
+  
 }
