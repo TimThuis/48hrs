@@ -7,6 +7,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
 
+  mount_uploader :photo, PhotoUploader
+
+  has_many :trips, dependent: :destroy, class_name: "Booking", foreign_key: "visitor_id"
+  has_many :requests, dependent: :destroy, class_name: "Booking", foreign_key: "guide_id"
+  has_many :tours, dependent: :destroy
+
   def self.find_for_facebook_oauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.provider = auth.provider
@@ -21,13 +27,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  has_many :trips, dependent: :destroy, class_name: "Booking", foreign_key: "visitor_id"
-  has_many :requests, dependent: :destroy, class_name: "Booking", foreign_key: "guide_id"
-
-  has_many :tours, dependent: :destroy
-
-  mount_uploader :photo, PhotoUploader
-
   # validates :first_name, :last_name, presence: true
   # validates :phone, presence: true
   # validates :bio, presence: true, length: {maximum: 200}
@@ -36,5 +35,4 @@ class User < ActiveRecord::Base
   # validates :street, presence: true
   # validates :zipcode, presence: true
   # validates :city, presence: true
-
 end

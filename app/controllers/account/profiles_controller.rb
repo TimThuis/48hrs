@@ -9,7 +9,7 @@ class Account::ProfilesController < ApplicationController
   def update
     @account = current_user
     @account.update(edit_params)
-    raise
+
     if @account.save!
       flash[:notice] = "Succesfully updated your profile."
       redirect_to account_profile_path
