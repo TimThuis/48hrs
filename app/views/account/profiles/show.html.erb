@@ -1,9 +1,14 @@
 <div class="container-profile-edit-account">
+<%= render "shared/navbarspace"  %>
   <div class="container padded">
     <div class="row">
       <div class="col-xs-12 col-sm-4 col-sm-offset-4">
         <div class="container-edit-profile">
-          <%= cl_image_tag current_user.photo, height: 150, width: 150, crop: :fill, :radius => :max, class: "profile-page-photo" %>
+          <% if current_user.provider %>
+            <%= image_tag current_user.picture, class: "profile-page-photo" %>
+          <% else %>
+            <%= cl_image_tag current_user.photo, height: 100, width: 100, crop: :fill, :radius => :max, class: "profile-page-photo" %>
+          <% end %>
           <h1><b><%= current_user.first_name %></b> profile page</h1>
           <p>This is your own personal space, check if the information is correct so visitor's will go on a adventure with you !</p>
           <div class="header-line"></div>
