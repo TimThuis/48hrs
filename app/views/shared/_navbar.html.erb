@@ -32,8 +32,11 @@
       <%= render "shared/navbarmenu"  %>
 
     <% else %>
-    <!-- Login text link -->
-    <%= link_to t(".top_call_to_action", default: "BECOME A GUIDE"), new_user_registration_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+      <!-- Login text link -->
+      <%= link_to t(".top_call_to_action", default: "SIGN IN"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
+
+      <!-- Login text link -->
+      <%= link_to t(".top_call_to_action", default: "BECOME A GUIDE"), new_user_registration_path(guide: true), class: "navbar-wagon-item navbar-wagon-button btn" %>
     <% end %>
   </div>
 
