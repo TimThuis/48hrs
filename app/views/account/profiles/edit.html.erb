@@ -18,9 +18,10 @@
         <%= f.input :zipcode %>
         <%= f.input :city %>
         <%= f.input :birthday %>
-        <%= f.input :picture_cache, as: :hidden %>
         <hr>
-        <%= f.input :picture_url, label: 'Profile Picture' %>
+        <%= f.input :photo, label: 'Profile Picture' %>
+        <%= cl_image_tag current_user.photo, height: 150, width: 150, crop: :fill, :radius => :max, class: "profile-page-photo" %>
+        <%= f.input :photo_cache, as: :hidden %>
         <%= f.input :bio %>
         <%= f.input :hour_rate %>
         <hr>
