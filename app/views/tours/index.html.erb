@@ -20,9 +20,10 @@
           <% if guide.guide == true %>
           <div class="card-position">
            <div class="card-profile">
-           <a href=""><img src="https://placeholdit.imgix.net/~text?txtsize=12&txt=125%C3%97125&w=125&h=125" alt=""></a>
+             <a href=""><img src="https://placeholdit.imgix.net/~text?txtsize=12&txt=125%C3%97125&w=125&h=125" alt=""></a>
              <div class="card-who">
               <div>
+                <% link_to "hello", guide_path(guide) %>
                 <p class="card-name"><a href=""><%= guide.first_name  %> <%= guide.last_name  %></a></p>
                 <p class="card-rating">
                   <% 3.times do %>

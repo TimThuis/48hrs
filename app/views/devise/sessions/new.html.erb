@@ -18,8 +18,9 @@
           </div>
           <% end %>
         </div>
-          <%= link_to "Join Us!", new_user_registration_path, {:class=> "sign-up-link"} %>
-          <%= link_to "Forgot Password?", new_user_password_path, {:class=> "password-link"} %>
+          <%#= link_to "Join Us!", new_user_registration_path, {:class=> "sign-up-link"} %>
+          <%#= link_to "Forgot Password?", new_user_password_path, {:class=> "password-link"} %>
+          <%= render "devise/shared/links" %>
       </div>
     </div>
   </div>
