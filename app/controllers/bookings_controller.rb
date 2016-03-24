@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.total_price = @booking.hours * @booking.hour_rate
     @booking.status = :pending
 
-    if @booking.save
+    if @booking.save!
       redirect_to visitor_bookings_path
     else
       render :new
