@@ -1,29 +1,16 @@
 <div class="navbar-wagon">
   <!-- Logo -->
-  <% if user_signed_in? %>
     <div>
       <%= link_to root_path, class: "navbar-wagon-brand" do %>
         <%= image_tag "48hrs_logo_white.svg", class: "logo-my48" %>
-          <div class="note-bullit">
-            <% if current_user.guide == true %>
-              <%= current_user.requests.length %>
-            <% else %>
-              <%= current_user.tours.length %>
-            <% end %>
-          </div>
         <% end %>
       </div>
-    <% else %>
-      <%= link_to new_user_session_path, class: "navbar-wagon-brand" do %>
-        <%= image_tag "48hrs_logo_white.svg", class: "logo-my48" %>
-      <% end %>
-    <% end %>
 
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
-    <%= link_to t(".sign_in", default: "ABOUT"), root_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to t(".sign_in", default: "HOW IT WORKS"), root_path, class: "navbar-wagon-item navbar-wagon-link" %>
     <%= link_to t(".sign_in", default: "EPIC STORIES"), root_path , class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to t(".sign_in", default: "ABOUT"), root_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
     <!-- Different navigation if login or not -->
     <% if user_signed_in? %>
@@ -33,10 +20,9 @@
 
     <% else %>
       <!-- Login text link -->
-      <%= link_to t(".top_call_to_action", default: "SIGN IN"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
-
-      <!-- Login text link -->
       <%= link_to t(".top_call_to_action", default: "BECOME A GUIDE"), new_user_registration_path(guide: true), class: "navbar-wagon-item navbar-wagon-button btn" %>
+
+      <%= link_to t(".top_call_to_action", default: "SIGN IN"), new_user_session_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
     <% end %>
   </div>
 
