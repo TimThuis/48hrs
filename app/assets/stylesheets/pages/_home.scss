@@ -68,30 +68,8 @@
   border-color: goldenrod;
 }
 
-// howitworks
-
-.howitworks-container {
-  max-width: 80vh;
-}
-
 .howitworks {
-  background-color: goldenrod;
-}
-
-.block {
-  width: 250px;
-  height: 250px;
-}
-
-.row-centered {
-    text-align:center;
-    max-height: 250px;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    text-align: center;
-    margin-right:-4px;
+  height: 100vh;
 }
 
 .col-max {
