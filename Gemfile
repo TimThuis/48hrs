@@ -11,6 +11,7 @@ gem 'redis'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'omniauth-facebook'
+gem 'activeadmin', github: 'activeadmin'
 
 gem 'sass-rails'
 gem 'jquery-rails'
@@ -38,4 +39,5 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'puma'
 end
