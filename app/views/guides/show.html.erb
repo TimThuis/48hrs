@@ -1,3 +1,7 @@
 <%= render "shared/navbarspace" %>
 <%= render 'guide_card', guide: @guide %>
 
+<% content_for :meta_title, "#{@guide.first_name} suggest a tour at #{@guide.hour_rate} €" %>
+<% content_for :meta_description, @tour.description %>
+<% content_for :meta_image, @guide.photo %>
+
