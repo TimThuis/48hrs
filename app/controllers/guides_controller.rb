@@ -7,6 +7,7 @@ class GuidesController < ApplicationController
   end
 
   def show #view
+    @tour = @guide.tours.first
   end
 
   def detail
