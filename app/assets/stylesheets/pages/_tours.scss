@@ -7,7 +7,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 315px;
+    bottom: 314px;
     width: 100%;
     z-index: -3;
   }
@@ -64,6 +64,9 @@ h1 {
     background-image: linear-gradient(-225deg, rgba(30,30,30,0.6) 30%, rgba(46,46,46,0.5) 80%);
     opacity: 0;
     z-index: 2;
+    &:active{
+      opacity: 0.5;
+    }
     &:hover {
      opacity: 0.5;
    }
@@ -163,67 +166,67 @@ h1 {
     -ms-transition: all ease 300ms;
     -o-transition: all ease 300ms;
     transition: all ease 300ms;
-      &:hover {
-        font-size: 18px;
-        opacity: 0.5;
-      }
+    &:hover {
+      font-size: 18px;
+      opacity: 0.5;
     }
   }
+}
 
-  .card-position > .arrow-up {
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid white;
-    position: absolute;
-    top: 100px;
-    left: 44px
-  }
-  .card-padding {
-    padding: 20px 20px 10px 20px;
-    background-color: white;
-    margin-bottom: 40px;
-  }
+.card-position > .arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid white;
+  position: absolute;
+  top: 100px;
+  left: 44px
+}
+.card-padding {
+  padding: 20px 20px 10px 20px;
+  background-color: white;
+  margin-bottom: 40px;
+}
 
-  .card-padding > p {
-    font-size: 15px;
-  }
+.card-padding > p {
+  font-size: 15px;
+}
 
 
-  @media all and (min-width: 1150px) and (max-width: 1300px) {
-
-    .category-cards > .category-item {
-      width: 150px;
-    }
-  }
-
-  @media all and (min-width: 0px) and (max-width: 1149px) {
-
-   .add-media-flex {
-    flex: 1;
-  }
-
-  .category-cards {
-    flex-direction: column;
-    flex: 0 0 150px;
-    max-width: 600px;
-    width: 100%;
-  }
-
-  .tours-container {
-    display: block;
-  }
-
-  .category-cards {
-    margin: 0 auto;
-    flex-direction: row;
-    margin-bottom: 40px;
-  }
+@media all and (min-width: 1150px) and (max-width: 1300px) {
 
   .category-cards > .category-item {
-    flex: 0 0  50%;
+    width: 150px;
   }
+}
+
+@media all and (min-width: 0px) and (max-width: 1149px) {
+
+ .add-media-flex {
+  flex: 1;
+}
+
+.category-cards {
+  flex-direction: column;
+  flex: 0 0 150px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.tours-container {
+  display: block;
+}
+
+.category-cards {
+  margin: 0 auto;
+  flex-direction: row;
+  margin-bottom: 40px;
+}
+
+.category-cards > .category-item {
+  flex: 0 0  50%;
+}
 }
 
 @media all and (min-width: 0px) and (max-width: 725px) {

@@ -10,7 +10,11 @@
           <i class="fa fa-star-o"></i>
           <% end %>
         </p>
-        <a class="button-booking" href=""><p>booking</p></a>
+
+        <%= link_to new_tour_booking_path(guide.tours.first), class: "button-booking" do %>
+          <p>Booking</p>
+        <% end %>
+
       </div>
     </div>
     <div class="guide-card-bio">
@@ -22,8 +26,8 @@
             <a href=""><i class="fa fa-envelope"></i></a>
           </div>
         </div>
-        <p class="guide-card-bio-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus porro repellat reiciendis similique quidem unde harum rerum excepturi cupiditate temporibus?</p>
-        <p class="guide-card-bio-hour-rate"> $ 10 /h</p>
+        <p class="guide-card-bio-description"><%= guide.bio %></p>
+        <p class="guide-card-bio-hour-rate"> $ <%= guide.hour_rate %> /h</p>
       </div>
     </div>
   </div>
