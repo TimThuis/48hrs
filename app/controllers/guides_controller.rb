@@ -4,6 +4,7 @@ class GuidesController < ApplicationController
 
   def index #view
     @guides = User.where(guide: true)
+    @booking = Booking.find(params[:id])
   end
 
   def show #view
