@@ -23,7 +23,11 @@
            <a href=""><img src="https://placeholdit.imgix.net/~text?txtsize=12&txt=125%C3%97125&w=125&h=125" alt=""></a>
              <div class="card-who">
               <div>
-                <p class="card-name"><a href=""><%= guide.first_name  %> <%= guide.last_name  %></a></p>
+                <p class="card-name">
+                  <%= link_to detail_guide_path(guide), remote: true do %>
+                    <%= guide.first_name  %> <%= guide.last_name %>
+                  <% end %>
+                </p>
                 <p class="card-rating">
                   <% 3.times do %>
                   <i class="fa fa-star"></i>
@@ -51,4 +55,7 @@
       </div>
     </div>
   </div>
+</div>
+
+<div class='modal-profile'>
 </div>
