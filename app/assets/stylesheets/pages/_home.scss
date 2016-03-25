@@ -1,9 +1,6 @@
 // banner
-
 .banner {
   background-image: image_url("roofgarden.png");
-  // z-index: -1;
-  // position: fixed;
   box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
   top: 0;
   background-size: cover !important;
@@ -75,6 +72,7 @@
 
 .howitworks-container {
   max-width: 80vh;
+}
 
 .howitworks {
   background-color: goldenrod;
@@ -98,19 +96,20 @@
 
 .col-max {
     max-width:250px;
-
 }
+
 .item {
   display:table;
 }
+
 .content {
   display:table-cell;
   vertical-align:middle;
   text-align:center;
 }
 .content:before {
-    font-family:sans-serif;
-    font-size:12px;
-    letter-spacing:1px;
-    color:#747474;
+  font-family:sans-serif;
+  font-size:12px;
+  letter-spacing:1px;
+  color:#747474;
 }
