@@ -71,46 +71,7 @@
   border-color: goldenrod;
 }
 
-// howitworks
-
-.howitworks-container {
-  max-width: 80vh;
-
 .howitworks {
-  background-color: goldenrod;
+  height: 100vh;
 }
 
-.block {
-  width: 250px;
-  height: 250px;
-}
-
-.row-centered {
-    text-align:center;
-    max-height: 250px;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    text-align: center;
-    margin-right:-4px;
-}
-
-.col-max {
-    max-width:250px;
-
-}
-.item {
-  display:table;
-}
-.content {
-  display:table-cell;
-  vertical-align:middle;
-  text-align:center;
-}
-.content:before {
-    font-family:sans-serif;
-    font-size:12px;
-    letter-spacing:1px;
-    color:#747474;
-}
