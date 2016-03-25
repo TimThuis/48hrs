@@ -11,6 +11,7 @@
            <%= f.input :email, required: true, autofocus: true %>
            <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
            <%= f.input :password_confirmation, required: true %>
+           <%= hidden_field_tag "user[guide]", params[:guide] %>
          </div>
 
          <div class="form-actions">
@@ -19,6 +20,9 @@
         <% end %>
       </div>
       <%= link_to "Login!", new_user_session_path, {:class=> "login-link"} %>
+
+      <%#= link_to "facebook", omniauth_authorize_path(resource_name, provider) %>
+      <%= render "devise/shared/links" %>
     </div>
   </div>
 </div>
