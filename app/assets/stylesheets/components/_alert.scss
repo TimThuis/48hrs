@@ -6,10 +6,13 @@
   margin: 0;
   text-align: center;
   color: white;
+  border: 0;
 }
 .alert-info {
-  background: $green;
+  background: #f0ad4e;
+  // position: absolute;
 }
 .alert-warning {
-  background: $red;
+  background: #D9534F;
+  // position: absolute;
 }

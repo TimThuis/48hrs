@@ -1,0 +1,32 @@
+.modal-profile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  overflow: scroll;
+  z-index: 99;
+  display: none;
+  padding-top: 50px;
+
+  &.is-active {
+    display: block;
+
+    .guide-card-container {
+      animation: fadeInModal .4s ease forwards;
+    }
+  }
+}
+
+@keyframes fadeInModal {
+  0% {
+    opacity: 0;
+    transform: translateY(10%)
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0%)
+  }
+}

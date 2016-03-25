@@ -1,1 +1,13 @@
+.main-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
 @import "home";
+@import "index-account-bookings";
+@import "index-account-tours";
+@import "edit-profile-account";
+@import "new-booking";
+@import "tours";
+@import "account-profile";
+@import "guide";

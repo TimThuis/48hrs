@@ -1,21 +1,37 @@
 
 <div class="text-center">
-  <h1>Visitor Bookings Index</h1>
+  <h1>Visitor <%= @visitor.first_name %> Bookings</h1>
 
+  <h1></h1>
   <% @bookings.each do |booking| %>
   <div class="row">
     <div class="col-xs-12 col-sm-12">
       <div class="card">
-        <h4>Booking: <%= booking.guide.first_name %></h4>
-        <p><i class="fa fa-envelope-o"></i> <%= booking.guide.email %>,
-          <p><i class="fa fa-phone"></i>  <%= booking.guide.phone %></p>
-          <p>About the booking: <%= booking.check_in %> - <%= booking.check_out %></p>
-          <p>Status: <%= booking.status %></p>
-          <% if booking.status != 'cancel' %>
-            <%= link_to 'cancel', cancel_visitor_booking_path(booking), method: :patch, data: {confirm: 'Are you sure to cancel this one?'} %>
-          <% end %>
-        </div>
+        <h4>Guide: <%= booking.guide.first_name %></h4>
+        <i class="fa fa-envelope-o">
+        </i> <%= booking.visitor.email %> |
+        <i class="fa fa-phone">
+        </i> <%= booking.visitor.phone %> |
+        <i class="fa fa-calendar"></i>
+        <%= booking.date %>
+        <b>Category: </b>
+        <%= booking.tour.category.name %> |
+        <b>Check-in:</b> <%= l(booking.check_in, format: :hours) %>
+        <br>
+        <b>Check-out:</b> <%= l(booking.check_out, format: :hours) %>
+        <br>
+        <b>Status:</b> <%= booking.status %> |
+        <b>Price:</b> <%= booking.total_price %>
+        <br>
+        <br>
+        <%# if booking.status != 'cancel' %>
+        <%= link_to 'cancel', cancel_visitor_booking_path(booking), method: :patch, data: {confirm: 'Are you sure to cancel this booking?'}, :class => "btn btn-warning btn-sm" %>
+        <%# end %>
+        <hr>
       </div>
     </div>
-    <% end %>
   </div>
+  <% end %>
+  <%= link_to "homepage", root_path, :class => "btn btn-default btn-sm" %>
+</div>
+

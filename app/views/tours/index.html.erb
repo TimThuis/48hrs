@@ -1,10 +1,63 @@
-<h1>Tours Index</h1>
+<div class="wrapper-tours">
+  <div class="background-white"></div>
+  <%= render "shared/navbarspace" %>
+  <div class="main-container">
+    <h1>Choose your local <b>guide</b></h1>
+    <div class="tours-container">
+      <div class="media-flex-1">
+        <div class="category-cards">
+          <% @categories.each do |category| %>
+          <div class="category-item" style="background: url('https://placeholdit.imgix.net/~text?txtsize=12&txt=125%C3%97125&w=125&h=125')">
+            <a href="" class="gradient-link"> </a>
+            <p> <%= category.name  %></p>
+          </div>
+          <% end %>
+        </div>
+      </div>
+      <div class="flex-1">
+        <div class="profiles-container">
+          <% @guides.each do |guide| %>
+          <% if guide.guide == true %>
+          <div class="card-position">
+           <div class="card-profile">
+             <a href=""><img src="https://placeholdit.imgix.net/~text?txtsize=12&txt=125%C3%97125&w=125&h=125" alt=""></a>
+             <div class="card-who">
+              <div>
 
-<ul>
-  <% @tours.each do |tour| %>
-  <li>
-  <b>id:</b> <%= tour.id %>
-  <b>description:</b> <%= tour.description %>
-  </li>
-  <% end %>
-</ul>
+                <p class="card-name">
+                  <%= link_to detail_guide_path(guide), remote: true do %>
+                    <%= guide.first_name  %> <%= guide.last_name %>
+                  <% end %>
+                </p>
+
+                <p class="card-rating">
+                  <% 3.times do %>
+                  <i class="fa fa-star"></i>
+                  <% end %>
+                  <% 2.times do %>
+                  <i class="fa fa-star-o"></i>
+                  <% end %></p>
+                </p>
+              </div>
+            </div>
+            <div class="card-action-icons">
+              <div class="card-booking">
+                <a href=""><i class="fa fa-phone"></i></a>
+                <a href=""><i class="fa fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="card-padding">
+            <p class="description"><%= guide.bio %></p>
+          </div>
+          <div class="arrow-up"></div>
+        </div>
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class='modal-profile'>
+</div>

@@ -1,4 +1,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap-sprockets
-//= require_tree .
+//= require active_admin.js.coffee
+//= reguire application.js
+//= require bookings.js
+//= require guides.js
+//= require omniauth_callbacks.js
+//= require tours.js
+//= require modal_profile

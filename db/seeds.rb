@@ -13,8 +13,8 @@ Review.destroy_all
 Category.destroy_all
 
 puts "create user"
-quoc = User.create!(email: "q@email.com", password: "12345678", guide: true, first_name: "Quoc", last_name: "Bui", birthday: "1990-11-02", picture_url: "https://unsplash.it/200/200/", street: "Vondelparklaan 22", zipcode: "1234 AB", city: "Amsterdam", phone:"+31 6 1234 5678", bio: "This is Q", hour_rate: 10)
-blane = User.create!(email: "blane@email.com", password: "12345678", guide: true, first_name: "Blane", last_name: "Bmatsardji", birthday: "1992-05-21", picture_url: "https://unsplash.it/200/200/", street: "De pijp 100", zipcode: "1234 AB", city: "Amsterdam", phone:"+31 6 1234 5678", bio: "This is Blane", hour_rate: 15)
+quoc = User.create!(email: "q@email.com", password: "12345678", guide: true, first_name: "Quoc", last_name: "Bui", birthday: "1990-11-02", photo: "", street: "Vondelparklaan 22", zipcode: "1234 AB", city: "Amsterdam", phone:"+31 6 1234 5678", bio: "This is Q", hour_rate: 10, rating: 3)
+blane = User.create!(email: "blane@email.com", password: "12345678", guide: true, first_name: "Blane", last_name: "Bmatsardji", birthday: "1992-05-21", photo: "", street: "De pijp 100", zipcode: "1234 AB", city: "Amsterdam", phone:"+31 6 1234 5678", bio: "This is Blane", hour_rate: 15, rating: 4)
 tim = User.create!(email: "tim@email.com", password: "12345678", guide: false, first_name: "Tim", last_name: "Thuis", phone:"+31 6 1234 5678")
 andre = User.create!(email: "andre@email.com", password: "12345678", guide: false, first_name: "Andre", last_name: "Kaas", phone:"+31 6 1234 5678")
 

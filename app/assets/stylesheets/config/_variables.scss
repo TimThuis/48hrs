@@ -20,6 +20,11 @@ $home-font: 'Roboto Condensed', "sans-serif";
 // Font-size and line-height
 $base-size: 16px;
 $base-height: 1.4;
+p {
+  letter-spacing: 0.4px;
+}
+
+
 
 /* -------------------------------------
  * Colors
@@ -29,9 +34,12 @@ $brand-color: #D23333;
 
 $red: #EE5F5B;
 $blue: #469AE0;
-$yellow: #FDB631;
+$yellow: #FBEB36;
+$yellow-own: #F7DB61;
 $orange: #E67E22;
 $green: #32B796;
+$black-own: #3C3838;
+
 
 // Gray scale
 $gray-darker:  lighten(#000, 13.5%); // #222

@@ -5,6 +5,10 @@ class Booking < ActiveRecord::Base
 
   has_many :reviews, dependent: :destroy
 
+  def hours
+    ((check_out - check_in) / 60) / 60
+  end
+
   # validates :check_in, :check_out, :date, presence: true
   # status
 end

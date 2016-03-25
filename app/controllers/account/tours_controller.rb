@@ -4,6 +4,7 @@ class Account::ToursController < ApplicationController
 
   def index #view
     @tours = current_user.tours
+    @guide = current_user
   end
 
   def new #view
@@ -15,7 +16,7 @@ class Account::ToursController < ApplicationController
     @tour = Tour.new(tour_params)
     @tour.user = current_user
 
-    if @tour.save
+    if @tour.save!
       flash[:notice] = "Succesfully saved your tour"
       redirect_to(account_tours_path)
     else
@@ -32,11 +33,11 @@ class Account::ToursController < ApplicationController
     @tour.update(tour_params)
     @tour.user = current_user
 
-    if @tour.save
+    if @tour.save!
       flash[:notice] = "Succesfully updated your tour"
       redirect_to(account_tours_path)
     else
-      flash[:alert] = "Please make sure you fill in the field"
+      flash[:alert] = "Please make sure you fill in the fields"
       render :edit
     end
   end
@@ -54,7 +55,7 @@ class Account::ToursController < ApplicationController
   end
 
   def tour_params
-    params.require(:tour).permit(:description)
+    params.require(:tour).permit(:description, :category_id)
   end
 
 end

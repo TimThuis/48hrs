@@ -15,6 +15,9 @@
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
 }
 
 /* Optional class to fix the navbar on top */
@@ -28,7 +31,8 @@
 
 /* Navbar logo */
 .navbar-wagon-brand img {
-  width: 30px;
+  width: 35px;
+  padding-top: 20px;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -43,6 +47,12 @@
   flex: 0 1 auto;
   cursor: pointer;
   padding: 0 20px;
+  z-index: 999;
+}
+
+.navbar-wagon-item:focus {
+  color: #F7DB61;
+  text-decoration: none;
 }
 
 /* Navbar standard link */
@@ -57,7 +67,7 @@
 }
 
 .navbar-wagon-link:active {
-  color: white;
+  color: yellow;
   text-decoration: none;
 }
 
@@ -76,6 +86,12 @@
   color: black;
   background: white;
   border-color: white;
+}
+
+.navbar-wagon-button:focus {
+  color: white;
+  background: transparent;
+  border-color: yellow;
 }
 
 // /* Navbar search form */
@@ -115,7 +131,7 @@
 /* Navbar dropdown menu */
 .navbar-wagon-dropdown-menu {
   margin-top: 15px;
-  box-shadow: 1px 1px 4px #E6E6E6;
+  // box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
 }
 .navbar-wagon-dropdown-menu li > a {
@@ -141,4 +157,20 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.note-bullit {
+  // transform: rotate(45deg);
+  border-radius: 999px;
+  height: 23px;
+  width: 23px;
+  background-color: #F0AD4E;
+  color: white;
+  text-align: center;
+  // font-weight: bold;
+  font-size: 15px;
+  line-height: 150%;
+  position: absolute;
+  top: -7px;
+  right: -7px;
 }

@@ -1,9 +1,7 @@
-<h1>Booking New</h1>
-
-
-<%= simple_form_for(@booking, url: tour_bookings_path(@tour)) do |f| %>
-<%= f.error_notification %>
-<%= f.input :check_in, :input_html => {class: 'book-date'} %>
-<%= f.input :check_out, :input_html => {class: 'book-date'} %>
-<%= f.submit class: "btn btn-primary" %>
-<% end %>
+<div class="body-form-new">
+  <div class="<%= tour_banner_css_class(@tour) %>">
+    <%= render "shared/navbarspace" %>
+    <%= render "bookings/newlayout" %>
+    <%= render "shared/footerspace" %>
+  </div>
+</div>
