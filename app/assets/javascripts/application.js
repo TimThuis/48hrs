@@ -5,5 +5,6 @@
 //= reguire application.js
 //= require bookings.js
 //= require guides.js
-//= omniauth_callbacks.js
-//= tours.js
+//= require omniauth_callbacks.js
+//= require tours.js
+//= require modal_profile

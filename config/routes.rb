@@ -7,7 +7,11 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
 
-  resources :guides, only: [:index, :show]
+  resources :guides, only: [:index, :show] do
+    member do
+      get :detail
+    end
+  end
 
   namespace :account do
     resource :profile, only: [:show, :edit, :update]
