@@ -12,19 +12,27 @@ Tour.destroy_all
 Review.destroy_all
 Category.destroy_all
 
+require "faker"
+
+
 puts "create user"
 # Guides
 quoc = User.create!(email: "q@email.com", password: "12345678", guide: true, first_name: "Quoc", last_name: "Bui", \
 birthday: "1990-11-02", photo: "", street: "Vondelparklaan 22", zipcode: "1234 AB", city: "Amsterdam", \
-phone:"+31 6 1234 5678", bio: "This is Q", hour_rate: 10, rating: 3, photo: "")
+phone:"+31 6 1234 5678", bio: "This is Q", hour_rate: 10, rating: 3)
 
 blane = User.create!(email: "blane@email.com", password: "12345678", guide: true, first_name: "Blane", last_name: "Matsardji", \
 birthday: "1992-05-21", photo: "", street: "De pijp 100", zipcode: "1234 AB", city: "Amsterdam", \
-phone:"+31 6 1234 5678", bio: "This is Blane", hour_rate: 15, rating: 4, photo: "")
+phone:"+31 6 1234 5678", bio: "This is Blane", hour_rate: 15, rating: 4)
+
+sjors = User.create!(email: "sjors@email.com", password: "12345678", guide: true, first_name: "Sjors", last_name: Faker::Name.last_name, \
+birthday: "2000-01-01", photo: "http://lorempixel.com/400/400/people/", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
+phone:Faker::PhoneNumber.cell_phone, bio: "This is Sjors", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+
 
 # Visitor
 tim = User.create!(email: "tim@email.com", password: "12345678", guide: false, first_name: "Tim", last_name: "Thuis", phone:"+31 6 1234 5678", photo: "")
-
+andre = User.create!(email: "andre@email.com", password: "12345678", guide: false, first_name: "Andre", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
 ####
 
 puts "create category"
@@ -41,7 +49,7 @@ shopping = Category.create!(name: "Shopping", description: "Do some sightseeing"
 
 puts "create tour"
 
-first_tour = Tour.create!(user: quoc, category: sport, description: "Sport!")
+first_tour = Tour.create!(user: quoc, category: active, description: "Sport!")
 second_tour = Tour.create!(user: quoc, category: party, description: "Party!")
 thirth_tour = Tour.create!(user: blane, category: food, description: "Food!")
 fourth_tour = Tour.create!(user: blane, category: cultural, description: "Cultural!")
