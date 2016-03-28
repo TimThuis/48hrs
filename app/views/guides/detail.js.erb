@@ -1,2 +1,2 @@
 $('.modal-profile').addClass('is-active')
-$('.modal-profile').html("<%= j render 'guides/guide_card', guide: @guide %>")
+$('.modal-profile').html("<%= j render 'guides/guide_card', guide: @guide, main_tour: @main_tour, extra_tours: @extra_tours %>")

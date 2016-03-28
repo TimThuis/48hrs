@@ -1,7 +1,7 @@
 class ToursController < ApplicationController
-
   def index #view
     category_id = params[:category_id]
+
     if category_id.blank?
       @selected_category = 'none'
       @tours = Tour.all
@@ -20,5 +20,4 @@ class ToursController < ApplicationController
 
   def show #view
   end
-
 end
