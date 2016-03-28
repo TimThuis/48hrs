@@ -125,10 +125,12 @@ a.button-booking {
 }
 
 .guide-card-tour {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid $black-own;
+  border: 1px solid #F6F6F6;
+  margin: 20px 0;
 }
 
 
@@ -136,25 +138,25 @@ a.button-booking {
   margin-top: 20px;
 }
 
- p.booking-description {
+p.booking-description {
   margin: 10px;
   flex: 5;
- }
+}
 
 a.button-checking {
-  margin: 10px;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
-  text-decoration: none;
-  color: $yellow-own;
-  display: block;
-  background-color: #3C3838;
-  padding: 10px 25px 2px 25px;
-  font-weight: 600;
-  transition: all ease 300ms;
-  opacity: 1;
-  &:hover {
-    opacity: 0.8;
-  }
+ border: 1px solid whitesmoke;
+ margin: 10px;
+ box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+ text-decoration: none;
+ color: $yellow-own;
+ display: block;
+ padding: 10px 25px 2px 25px;
+ font-weight: 600;
+ transition: all ease 300ms;
+ opacity: 1;
+ &:hover {
+  opacity: 0.8;
+}
 }
 
 .user-card-review > .arrow-left {

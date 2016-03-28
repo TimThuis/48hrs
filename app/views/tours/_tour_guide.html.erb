@@ -1,8 +1,11 @@
 <div class="wrapper-tours">
-  <div class="background-white"></div>
+  <div class="<%= category_banner_css_class(@selected_category) %>"></div>
   <%= render "shared/navbarspace" %>
   <div class="main-container">
-    <h1>Choose your local <b>guide</b></h1>
+    <% if @selected_category.is_a?(Category) %>
+      <h1><%= @selected_category.name %> <b>Guide</b></h1>
+    <% end %>
+
     <div class="tours-container">
       <div class="media-flex-1">
         <div class="category-cards">
@@ -20,13 +23,13 @@
           <% if guide.guide == true %>
           <div class="card-position">
            <div class="card-profile">
-              <%= link_to image_tag('https://placeholdit.imgix.net/~text?txtsize=12&txt=125%C3%97125&w=125&h=125'), detail_guide_path(guide), remote: true %>
+              <%= link_to image_tag('https://placeholdit.imgix.net/~text?txtsize=12&txt=125%C3%97125&w=125&h=125'), detail_guide_path(guide, category_id: params[:category_id]), remote: true %>
 
              <div class="card-who">
               <div>
 
                 <p class="card-name">
-                  <%= link_to detail_guide_path(guide), remote: true do %>
+                  <%= link_to detail_guide_path(guide, category_id: params[:category_id]), remote: true do %>
                     <%= guide.first_name  %> <%= guide.last_name %>
                   <% end %>
                 </p>

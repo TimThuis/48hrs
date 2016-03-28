@@ -1,7 +1,9 @@
 .wrapper-tours {
   position: relative;
-  .background-white {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0, 0.6)),url("travel.jpg");
+
+  .category-banner {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("default-category.jpg");
+
     background-size: cover !important;
     position: absolute;
     top: 0;
@@ -10,7 +12,29 @@
     bottom: 314px;
     width: 100%;
     z-index: -3;
+
   }
+
+  .category-banner-bar {
+
+  }
+
+  .category-banner-cultural {
+
+  }
+
+  .category-banner-food {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("food.jpg");
+  }
+
+  .category-banner-party {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("party.jpg");
+  }
+
+  .category-banner-sport {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("active.jpg");
+  }
+
   h1 {
     color: white;
   }

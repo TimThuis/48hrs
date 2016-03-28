@@ -29,9 +29,9 @@
 
   <div class="guide-card-information">
     <div class="guide-card-about">
-    <h3>Activity <span class="hrs-left">(20hrs left)</span></h3>
-      <p>I am a Software Engineer from Toronto, currently working as a Ruby on Rails Developer at theScore Inc. I am passionate about helping people, especially who are new to the web development and the programming world. I am specialized in explaining core concepts of Ruby and Rails along with the best practices. I focus on the learning experience of my students and make sure they get  </p>
-      <%= link_to new_tour_booking_path(guide.tours.first), class: "button-booking" do %>
+      <h3>Activity <span class="hrs-left">(20hrs left)</span></h3>
+      <p><%= main_tour.description %></p>
+      <%= link_to new_tour_booking_path(main_tour), class: "button-booking" do %>
       <p>Booking</p>
       <% end %>
 
@@ -43,15 +43,18 @@
      <hr>
      <h4>More tours</h4>
 
+     <% extra_tours.each do |tour| %>
      <div class="guide-card-tour">
-      <p class="booking-description">Eat cholade nearby famous bridge</p>
+      <p class="booking-description"><%= tour.description %></p>
       <span class"hrs-left">1hr left</span>
-      <%= link_to new_tour_booking_path(guide.tours.first), class: "button-checking" do %>
+      <%= link_to detail_guide_path(guide, category_id: tour.category_id), remote: true, class: "button-checking" do %>
       <p>Check</p>
       <% end %>
     </div>
+    <% end %>
   </div>
 </div>
+
 
 <div class="guide-card-rating text-center">
  <hr>
