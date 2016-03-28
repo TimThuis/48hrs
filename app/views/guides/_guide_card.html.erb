@@ -10,11 +10,6 @@
           <i class="fa fa-star-o"></i>
           <% end %>
         </p>
-
-        <%= link_to new_tour_booking_path(guide.tours.first), class: "button-booking" do %>
-          <p>Booking</p>
-        <% end %>
-
       </div>
     </div>
     <div class="guide-card-bio">
@@ -32,42 +27,56 @@
     </div>
   </div>
 
+  <div class="guide-card-information">
+    <div class="guide-card-about">
+    <h3>Activity <span class="hrs-left">(20hrs left)</span></h3>
+      <p>I am a Software Engineer from Toronto, currently working as a Ruby on Rails Developer at theScore Inc. I am passionate about helping people, especially who are new to the web development and the programming world. I am specialized in explaining core concepts of Ruby and Rails along with the best practices. I focus on the learning experience of my students and make sure they get  </p>
+      <%= link_to new_tour_booking_path(guide.tours.first), class: "button-booking" do %>
+      <p>Booking</p>
+      <% end %>
 
-
-
-        <div class="guide-card-information">
-          <div class="guide-card-about">
-            <h2>About me</h2>
-            <p>I am a Software Engineer from Toronto, currently working as a Ruby on Rails Developer at theScore Inc. I am passionate about helping people, especially who are new to the web development and the programming world. I am specialized in explaining core concepts of Ruby and Rails along with the best practices. I focus on the learning experience of my students and make sure they get
-
-            </p>
-          </div>
-        </div>
-
-        <div class="guide-card-rating text-center">
-         <hr>
-         <div class="guide-card-avarage-rating">
-          <h4>Average Rating</h4>
-          <p class="avarage-number"> 5.0</p>
-          <p>★ ★ ★ ★ ★   152 ratings</p>
-        </div>
-      </div>
-
-
-
-        <div class="user-card-review">
-          <div class="arrow-left"></div>
-          <div class="user-card-review-profile">
-            <div class="user-avatar-review-letter"><span>S</span></div>
-          </div>
-          <div class="user-card-comment-row">
-           <div class="user-card-review-comment">
-            <p>Was a very helpfull session, straight to the point of what I need! Thanks!</p>
-          </div>
-          <div class="user-card-review-comment-footer">
-            <p>Susan</p>
-            <p class="date">Mar 24, 2016</p>
-          </div>
-        </div>
+    </div>
   </div>
+
+  <div class="guide-card-information">
+    <div class="guide-card-tours">
+     <hr>
+     <h4>More tours</h4>
+
+     <div class="guide-card-tour">
+      <p class="booking-description">Eat cholade nearby famous bridge</p>
+      <span class"hrs-left">1hr left</span>
+      <%= link_to new_tour_booking_path(guide.tours.first), class: "button-checking" do %>
+      <p>Check</p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="guide-card-rating text-center">
+ <hr>
+ <div class="guide-card-avarage-rating">
+  <h4>Average Rating</h4>
+  <p class="avarage-number"> 5.0</p>
+  <p>★ ★ ★ ★ ★   152 ratings</p>
+</div>
+</div>
+
+
+
+<div class="user-card-review">
+  <div class="arrow-left"></div>
+  <div class="user-card-review-profile">
+    <div class="user-avatar-review-letter"><span>S</span></div>
+  </div>
+  <div class="user-card-comment-row">
+   <div class="user-card-review-comment">
+    <p>Was a very helpfull session, straight to the point of what I need! Thanks!</p>
+  </div>
+  <div class="user-card-review-comment-footer">
+    <p>Susan</p>
+    <p class="date">Mar 24, 2016</p>
+  </div>
+</div>
+</div>
 </div>
