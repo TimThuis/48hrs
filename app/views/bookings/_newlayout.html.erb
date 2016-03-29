@@ -14,7 +14,7 @@
             <%= link_to guide_path(@tour.user) do %>
               <% if @tour.user.provider %>
                 <%= image_tag @tour.user.picture, class: "guide-photo"  %>
-              <% elsif current_user.photo.present? %>
+              <% elsif @tour.user.photo.present? %>
                 <%= image_tag @tour.user.photo, class: "guide-photo"  %>
               <% else %>
                 <%= image_tag "default-user-photo.png", class: "guide-photo"  %>
@@ -46,13 +46,7 @@
                 </div>
               </div>
             </div>
-            <% if user_signed_in? %>
             <%= f.submit class: "btn btn-primary" %>
-            <% else %>
-            <% flash[:notice] = "You need to login or make a account to make a booking." %>
-            <%= f.submit class: "btn btn-primary" %>
-            <% end %>
-            <% end %>
           </div>
         </div>
       </div>
@@ -64,3 +58,4 @@
       </div>
     </div>
   </div>
+  <% end %>
