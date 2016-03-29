@@ -1,8 +1,10 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user!, only: [:create]
   before_action :find_tour, only: [:new, :create]
 
-  def new #view
+  def new # view
     @booking = Booking.new
+    session[:user_return_to] = request.original_url
   end
 
   def create
