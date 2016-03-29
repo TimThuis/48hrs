@@ -37,12 +37,11 @@
                     <%= guide.first_name  %> <%= guide.last_name %>
                   <% end %>
                 </p>
-
                 <p class="card-rating">
-                  <% 3.times do %>
+                <% guide.rating.times do  %>
                   <i class="fa fa-star"></i>
                   <% end %>
-                  <% 2.times do %>
+                <% (5 - guide.rating).times do  %>
                   <i class="fa fa-star-o"></i>
                   <% end %></p>
                 </p>
