@@ -1,11 +1,11 @@
 <div class="navbar-wagon-item">
   <div class="dropdown">
     <% if current_user.provider %>
-    <%= image_tag current_user.picture, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-    <% elsif current_user.photo == nil %>
-    <%= image_tag "https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=50&h=50", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+      <%= image_tag current_user.picture, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+    <% elsif current_user.photo.present? %>
+      <%= image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
     <% else %>
-    <%= image_tag current_user.photo, class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
+      <%= image_tag "https://placeholdit.imgix.net/~text?txtsize=6&txt=50%C3%9750&w=50&h=50", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
     <% end %>
     <div class="note-bullit">
       <% if current_user.guide == true %>

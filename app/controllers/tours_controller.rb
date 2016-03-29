@@ -11,7 +11,7 @@ class ToursController < ApplicationController
       @tours = Tour.select{|t| t.category == @selected_category}
       @guides = User.select{|u| u.guide == true && u.tours.map{|t| t.category.id}.include?(category_id.to_i)}
       if @guides.blank?
-        flash[:notice] = "Dude we don't have any guides for this category"
+        flash[:notice] = "We're sorry, we don't have any guides for this category."
         @guides = User.select{|u| u.guide}
       end
     end

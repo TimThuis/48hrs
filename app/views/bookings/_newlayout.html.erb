@@ -11,23 +11,23 @@
           <div class="guide text-center">
             <h2>- <%= @tour.user.first_name %> <%= @tour.user.last_name %> -</h2>
             <div class="price">€<%= @tour.user.hour_rate  %></div>
-              <%= link_to guide_path(@tour.user) do %>
-                <% if @tour.user.provider %>
-                  <%= image_tag @tour.user.picture, class: "guide-photo"  %>
-                <% elsif current_user.photo != nil %>
-                  <%= image_tag @tour.user.photo, class: "guide-photo"  %>
-                  <% else %>
-                  <%= image_tag "https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97200&w=200&h=200", class: "guide-photo"  %>
-                  <% end %>
+            <%= link_to guide_path(@tour.user) do %>
+              <% if @tour.user.provider %>
+                <%= image_tag @tour.user.picture, class: "guide-photo"  %>
+              <% elsif current_user.photo.present? %>
+                <%= image_tag @tour.user.photo, class: "guide-photo"  %>
+              <% else %>
+                <%= image_tag "https://placeholdit.imgix.net/~text?txtsize=19&txt=200%C3%97200&w=200&h=200", class: "guide-photo"  %>
               <% end %>
+            <% end %>
             <div class="stars">
               <% if @tour.user.rating %>
-                <% @tour.user.rating.times do %>
-                  <i class="fa fa-star"></i>
-                <% end %>
-                <% (5 - @tour.user.rating).times do %>
-                  <i class="fa fa-star-o"></i>
-                <% end %>
+              <% @tour.user.rating.times do %>
+              <i class="fa fa-star"></i>
+              <% end %>
+              <% (5 - @tour.user.rating).times do %>
+              <i class="fa fa-star-o"></i>
+              <% end %>
               <% end %>
             </div>
             <hr>
@@ -46,7 +46,12 @@
                 </div>
               </div>
             </div>
+            <% if user_signed_in? %>
             <%= f.submit class: "btn btn-primary" %>
+            <% else %>
+            <% flash[:notice] = "You need to login or make a account to make a booking." %>
+            <%= f.submit class: "btn btn-primary" %>
+            <% end %>
             <% end %>
           </div>
         </div>
