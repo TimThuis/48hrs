@@ -1,14 +1,12 @@
 .body-bookings-visitor {
-  background-color: $gray-lighter;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("active.jpeg");
+  background-size: cover !important;
   height: 100vh;
-
+  // position: fixed;
 }
 
 .banner-bookings-visitor {
-  // background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("party_wallpaper.jpeg");
-  // background-size: cover !important;
-  background-color: rgba(0,0,0,0.2);
-  height: 200px;
+  // background-color: rgba(0,0,0,0.2);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,3 +32,60 @@
   background-color: white;
   padding: 20px;
 }
+
+.content-booking-visitor {
+  margin-top: 30px;
+}
+
+.basic-bookings-card {
+  margin-top: 50px;
+}
+
+.bookings-card {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  position: relative
+}
+
+.bookings-photo {
+  height: 80px;
+  width: 80px;
+  border-radius: 999px;
+  border: 3px solid white;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 1;
+}
+
+.guide-name {
+  position: absolute;
+  top: -15px;
+  left: 70px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.bookings-text {
+  height: 150px;
+  width: 300px;
+  position: relative;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40px;
+}
+
+.status-booking {
+  height: 150px;
+  width: 150px;
+  background-color: $black-own;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+

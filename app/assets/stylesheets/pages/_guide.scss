@@ -14,7 +14,9 @@
   @media (max-width: $screen-sm) {
     flex-flow: column;
   }
+
   &-avatar{
+    background-size: cover;
     text-align: center;
     background-color: #3C3838;
     height: 300px;
@@ -22,7 +24,11 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-bottom: 70px;
+    // padding-bottom: 70px;
+
+    .rating {
+      padding-bottom: 35px;
+    }
 
     @media (max-width: $screen-sm) {
       order: 2;
@@ -217,6 +223,8 @@ a.button-checking {
     }
   }
 }
+
+
 
 
 

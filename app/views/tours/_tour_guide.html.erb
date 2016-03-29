@@ -14,7 +14,7 @@
       <div class="media-flex-1">
         <div class="category-cards">
           <% @categories.each do |category| %>
-          <div class="category-item" style="background: url('https://placeholdit.imgix.net/~text?txtsize=12&txt=125%C3%97125&w=125&h=125')">
+          <div class="category-item" style="background: url(<%= category.photo %>)">
             <%= link_to "", tours_path({category_id: category.id}), class: "gradient-link" %>
             <p> <%= category.name  %></p>
           </div>
@@ -27,7 +27,7 @@
           <% if guide.guide == true %>
           <div class="card-position">
            <div class="card-profile">
-              <%= link_to image_tag('https://placeholdit.imgix.net/~text?txtsize=12&txt=125%C3%97125&w=125&h=125'), detail_guide_path(guide, category_id: params[:category_id]), remote: true %>
+              <%= link_to image_tag(guide.photo), detail_guide_path(guide, category_id: params[:category_id]), remote: true %>
 
              <div class="card-who">
               <div>
