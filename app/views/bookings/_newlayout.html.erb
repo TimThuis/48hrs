@@ -21,11 +21,13 @@
                   <% end %>
               <% end %>
             <div class="stars">
-              <% @tour.user.rating.times do %>
-                <i class="fa fa-star"></i>
-              <% end %>
-              <% (5 - @tour.user.rating).times do %>
-                <i class="fa fa-star-o"></i>
+              <% if @tour.user.rating %>
+                <% @tour.user.rating.times do %>
+                  <i class="fa fa-star"></i>
+                <% end %>
+                <% (5 - @tour.user.rating).times do %>
+                  <i class="fa fa-star-o"></i>
+                <% end %>
               <% end %>
             </div>
             <hr>
