@@ -3,10 +3,10 @@
     <div class="guide-card-avatar" style="background: url('http://placehold.it/250x250')">
       <div class="guide-card-booking">
         <p class="rating">
-          <% 3.times do %>
+          <% guide.rating.times do %>
           <i class="fa fa-star"></i>
           <% end %>
-          <% 2.times do %>
+          <% (5 - guide.rating).times do %>
           <i class="fa fa-star-o"></i>
           <% end %>
         </p>
@@ -29,7 +29,7 @@
 
   <div class="guide-card-information">
     <div class="guide-card-about">
-      <h3>Activity <span class="hrs-left">(20hrs left)</span></h3>
+      <h3><%= main_tour.category.name %> <span class="hrs-left">(20hrs left)</span></h3>
       <p><%= main_tour.description %></p>
       <%= link_to new_tour_booking_path(main_tour), class: "button-booking" do %>
       <p>Booking</p>
@@ -60,8 +60,7 @@
  <hr>
  <div class="guide-card-avarage-rating">
   <h4>Average Rating</h4>
-  <p class="avarage-number"> 5.0</p>
-  <p>★ ★ ★ ★ ★   152 ratings</p>
+  <p class="avarage-number"> <%= guide.rating %>.0</p>
 </div>
 </div>
 
