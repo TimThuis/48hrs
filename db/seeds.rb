@@ -17,64 +17,115 @@ require "faker"
 
 puts "create user"
 # Guides
-quoc = User.create!(email: "q@email.com", password: "12345678", guide: true, first_name: "Quoc", last_name: "Bui", \
+quoc = User.new(email: "q@email.com", password: "12345678", guide: true, first_name: "Quoc", last_name: "Bui", \
 birthday: "1990-11-02", photo: "", street: "Vondelparklaan 22", zipcode: "1234 AB", city: "Amsterdam", \
 phone:"+31 6 1234 5678", bio: "Software consultant, OSS contributor, blogger", hour_rate: 10, rating: 3)
+quoc[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459254858/q_xctupa.jpg"
+quoc.save!
 
-blane = User.create!(email: "blane@email.com", password: "12345678", guide: true, first_name: "Blane", last_name: "Matsardji", \
+blane = User.new(email: "blane@email.com", password: "12345678", guide: true, first_name: "Blane", last_name: "Matsardji", \
 birthday: "1992-05-21", photo: "", street: "De pijp 100", zipcode: "1234 AB", city: "Amsterdam", \
 phone:"+31 6 1234 5678", bio: "Hacker & Author", hour_rate: 15, rating: 4)
+blane[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459254853/blane_saezl3.jpg"
+blane.save!
 
-sjors = User.create!(email: "sjors@email.com", password: "12345678", guide: true, first_name: "Sjors", last_name: Faker::Name.last_name, \
+sjors = User.new(email: "sjors@email.com", password: "12345678", guide: true, first_name: "Sjors", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
 phone:Faker::PhoneNumber.cell_phone, bio: "Iconoclastic. Polyamorous. GitHubber. I say we take off and nuke the patriarchy from orbit. It’s the only way to be sure.", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+sjors[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_6_jvdhqo.jpg"
+sjors.save!
 
-kim = User.create!(email: "Kim@email.com", password: "12345678", guide: true, first_name: "Kim", last_name: Faker::Name.last_name, \
-birthday: "2000-01-01", photo: "
-http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_4_rc4lni.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
+kim = User.new(email: "Kim@email.com", password: "12345678", guide: true, first_name: "Kim", last_name: Faker::Name.last_name, \
+birthday: "2000-01-01", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
 phone:Faker::PhoneNumber.cell_phone, bio: "Immigrant. Rationalist", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+kim[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235352/guide_10_skuxvj.jpg"
+kim.save!
 
-angel = User.create!(email: "Angel@email.com", password: "12345678", guide: true, first_name: "Angel", last_name: Faker::Name.last_name, \
+angel = User.new(email: "Angel@email.com", password: "12345678", guide: true, first_name: "Angel", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
 phone:Faker::PhoneNumber.cell_phone, bio: "Chilli dogs & a good cup of tea. Mental Health advocate", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+angel[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235352/guide_9_leuyj8.jpg"
+angel.save!
 
-emma = User.create!(email: "Emma@email.com", password: "12345678", guide: true, first_name: "Emma", last_name: Faker::Name.last_name, \
+emma = User.new(email: "Emma@email.com", password: "12345678", guide: true, first_name: "Emma", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
 phone:Faker::PhoneNumber.cell_phone, bio: "Fighting to save the Universe from The Powers", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+emma[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg"
+emma.save!
 
-chantal = User.create!(email: "Chantal@email.com", password: "12345678", guide: true, first_name: "Chantal", last_name: Faker::Name.last_name, \
+chantal = User.new(email: "Chantal@email.com", password: "12345678", guide: true, first_name: "Chantal", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
 phone:Faker::PhoneNumber.cell_phone, bio: "Pie enthusiast, fluent in Dad Humor, and Cleveland evangelist", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+chantal[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_3_otlc41.jpg"
+chantal.save!
 
-sara = User.create!(email: "Sara@email.com", password: "12345678", guide: true, first_name: "Sara", last_name: Faker::Name.last_name, \
+sara = User.new(email: "Sara@email.com", password: "12345678", guide: true, first_name: "Sara", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
 phone:Faker::PhoneNumber.cell_phone, bio: "Adventuring daily into the world", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+sara[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_4_rc4lni.jpg"
+sara.save!
 
-hendrik = User.create!(email: "Hendrik@email.com", password: "12345678", guide: true, first_name: "Hendrik", last_name: Faker::Name.last_name, \
+hendrik = User.new(email: "Hendrik@email.com", password: "12345678", guide: true, first_name: "Hendrik", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
 phone:Faker::PhoneNumber.cell_phone, bio: " You’ll be unhappy – but in new, exciting and important ways", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+hendrik[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235352/guide_7_onjj2t.jpg"
+hendrik.save!
 
-peter = User.create!(email: "Peter@email.com", password: "12345678", guide: true, first_name: "Peter", last_name: Faker::Name.last_name, \
+peter = User.new(email: "Peter@email.com", password: "12345678", guide: true, first_name: "Peter", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
 phone:Faker::PhoneNumber.cell_phone, bio: "Foodie | Football | Ad Tech | Disruptive Innovation", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+peter[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_5_ogppau.jpg"
+peter.save!
 
 
 # Visitor
-tim = User.create!(email: "tim@email.com", password: "12345678", guide: false, first_name: "Tim", last_name: "Thuis", phone:"+31 6 1234 5678", photo: "")
-andre = User.create!(email: "andre@email.com", password: "12345678", guide: false, first_name: "Andre", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
-jan = User.create!(email: "jan@email.com", password: "12345678", guide: false, first_name: "jan", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
-henk = User.create!(email: "henk@email.com", password: "12345678", guide: false, first_name: "henk", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
-henna = User.create!(email: "henna@email.com", password: "12345678", guide: false, first_name: "henna", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
+tim = User.new(email: "tim@email.com", password: "12345678", guide: false, first_name: "Tim", last_name: "Thuis", phone:"+31 6 1234 5678", photo: "")
+tim[:photo] = ""
+tim.save!
+
+andre = User.new(email: "andre@email.com", password: "12345678", guide: false, first_name: "Andre", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
+andre[:photo] = ""
+andre.save!
+
+jan = User.new(email: "jan@email.com", password: "12345678", guide: false, first_name: "jan", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
+jan[:photo] = ""
+jan.save!
+
+henk = User.new(email: "henk@email.com", password: "12345678", guide: false, first_name: "henk", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
+henk[:photo] = ""
+henk.save!
+
+henna = User.new(email: "henna@email.com", password: "12345678", guide: false, first_name: "henna", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
+henna[:photo] = ""
+henna.save!
+
 ####
 
 puts "create category"
 
-active = Category.create!(name: "Active", description: "Activities or stay active at a slightly more moderate pace throughout Amsterdam", photo:"")
-party = Category.create!(name: "Party", description: "All the parties in Amsterdam - the type of music, crowd and atmosphere.", photo:"")
-food = Category.create!(name: "Food", description: "Restaurants bringing together the best places to eat out from throughout Amsterdam.", photo:"")
-bar = Category.create!(name: "Bar", description: "Bars, pubs and the best places to drink in Amsterdam", photo:"")
-cultural = Category.create!(name: "Cultural", description: "Discover the hidden secrets culture of Amsterdam", photo:"")
-shopping = Category.create!(name: "Shopping", description: "The best places to hit the shops in Amsterdam", photo:"")
+active = Category.create!(name: "Active", description: "Activities or stay active at a slightly more moderate pace throughout Amsterdam")
+active[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256332/sport-sm_bhgpwr.jpg"
+active.save!
+
+party = Category.create!(name: "Party", description: "All the parties in Amsterdam - the type of music, crowd and atmosphere.")
+party[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256331/party-sm_bm1gna.jpg"
+party.save!
+
+food = Category.create!(name: "Food", description: "Restaurants bringing together the best places to eat out from throughout Amsterdam.")
+food[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256331/food-sm_yzneke.jpg"
+food.save!
+
+bar = Category.create!(name: "Bar", description: "Bars, pubs and the best places to drink in Amsterdam")
+bar[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256331/drink-sm_jknrxx.jpg"
+bar.save!
+
+cultural = Category.create!(name: "Cultural", description: "Discover the hidden secrets culture of Amsterdam")
+cultural[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256331/shopping-sm_rxoym4.jpg"
+cultural.save!
+
+shopping = Category.create!(name: "Shopping", description: "The best places to hit the shops in Amsterdam")
+shopping[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256331/cultural-sm_rtptu1.jpg"
+shopping.save!
 
 
 ####
@@ -110,8 +161,8 @@ tour27 = Tour.create!(user: sara, category: shopping, description: "Shop in uniq
 
 puts "create booking"
 
-booking1 = Booking.create!(visitor: tim, guide: sara, tour: tour23, date:"Tue, 01 Jan 2016", check_in:"", check_out:"", status:"pending", total_price: 0, hour_rate: 15)
-booking2 = Booking.create!(visitor: tim, guide: quoc, tour: tour12, date:"Tue, 01 Jan 2016", check_in:"", check_out:"", status:"cancel", total_price: 0, hour_rate: 15)
+booking1 = Booking.create!(visitor: tim, guide: sara, tour: tour23, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00", status:"pending", total_price: 0, hour_rate: 15)
+booking2 = Booking.create!(visitor: tim, guide: quoc, tour: tour12, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00", status:"cancel", total_price: 0, hour_rate: 15)
 booking3 = Booking.create!(visitor: tim, guide: chantal, tour: tour13, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"confirm", total_price: 0, hour_rate: 15)
 booking4 = Booking.create!(visitor: tim, guide: sjors, tour: tour20, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"pending", total_price: 0, hour_rate: 15)
 booking5 = Booking.create!(visitor: tim, guide: quoc, tour: tour21, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"pending", total_price: 0, hour_rate: 15)

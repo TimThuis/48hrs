@@ -24,3 +24,6 @@ en:
   time:
     formats:
       hours: "%H:%M"
+  date:
+    formats:
+      weekday:

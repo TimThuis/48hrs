@@ -1,5 +1,5 @@
 <div class="index-account-bookings">
-<%= render "shared/navbarspace"  %>
+  <%= render "shared/navbarspace"  %>
   <div class="header-account-bookings">
     <h1><b><%= @guide.first_name %>'s</b> Bookings</h1>
     <div class="header-line"></div>
@@ -14,7 +14,7 @@
              <th>Client</th>
              <th>Phone</th>
              <th>Date</th>
-             <th>Check-in</th>
+             <th>Check-in / Check-out</th>
              <th>Price</th>
              <th>Status</th>
              <th></th>
@@ -25,9 +25,9 @@
          <tr>
            <td><i class="fa fa-user"></i> <%=  booking.visitor.first_name%> <%=  booking.visitor.last_name%></td>
            <td><i class="fa fa-phone"></i> <%= booking.visitor.phone  %></td>
-           <td><i class="fa fa-calendar"></i> <%= booking.date %></td>
-           <td><i class="fa fa-clock-o"></i> <%= booking.check_in %></td>
-           <td><i class="fa fa-eur"></i> <%= booking.guide.hour_rate %></td>
+           <td><i class="fa fa-calendar"></i> <%= l(booking.date, format: "%a %d %b") %></td>
+           <td><i class="fa fa-clock-o"></i> <%= l(booking.check_in, format: :hours) %> - <%= l(booking.check_out, format: :hours) %></td>
+           <td><i class="fa fa-eur"></i> <%= ((booking.check_out - booking.check_in) / 3600) * booking.guide.hour_rate %></td>
            <td>
              <% if booking.status == "pending" %>
              <span style="color:#E67E22;"><i class="fa fa-pause-circle"></i></i> <%= booking.status  %></span>
@@ -46,21 +46,14 @@
            <td class= "text-right">
              <%= link_to "decline", decline_account_booking_path(booking), method: :patch, data: { confirm: "Are you sure to decline this booking ?" }, :class => "btn btn-warning btn-sm" %>
            </td>
-           <% else %>
-           <td class= "text-right">
-             <button class="btn btn-default btn-sm">accept</button>
-           </td>
-           <td class= "text-right">
-           <button class="btn btn-default btn-sm">decline</button>
-         </td>
-         <% end %>
-         <% end %>
-       </tr>
-     </table>
+           <% end %>
+           <% end %>
+         </tr>
+       </table>
+     </div>
    </div>
  </div>
-</div>
 
-<%# hours = booking.check_in - booking.check_out  %>
-<%# price = hours * booking.hour_rate %>
-<%#= price  %>
+ <%# hours = booking.check_in - booking.check_out  %>
+ <%# price = hours * booking.hour_rate %>
+ <%#= price  %>
