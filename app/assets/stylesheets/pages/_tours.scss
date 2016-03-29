@@ -1,15 +1,20 @@
+p.category-description {
+  color: white;
+   margin-bottom: 50px;
+   font-size: 20px;
+}
+
 .wrapper-tours {
   position: relative;
 
   .category-banner {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("default-category.jpg");
-
+    position: fixed;
     background-size: cover !important;
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 314px;
+    bottom: 322px;
     width: 100%;
     z-index: -3;
 
@@ -38,10 +43,6 @@
   h1 {
     color: white;
   }
-}
-
-h1 {
-  margin-bottom: 40px;
 }
 
 .tours-container {
@@ -96,6 +97,7 @@ h1 {
    }
  }
 }
+
 
 .flex-1 {
   flex: 1;
