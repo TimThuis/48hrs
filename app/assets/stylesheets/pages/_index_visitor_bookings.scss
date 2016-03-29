@@ -37,38 +37,41 @@
   margin-top: 30px;
 }
 
+.basic-bookings-card {
+  margin-top: 50px;
+}
+
 .bookings-card {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   padding: 20px;
+  position: relative
 }
 
 .bookings-photo {
-  height: 200px;
-  width: 200px;
-  padding-bottom: 20px;
-  background-color: black;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  color: $yellow-own;
-  font-weight: bold;
-
+  height: 80px;
+  width: 80px;
+  border-radius: 999px;
+  border: 3px solid white;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  z-index: 1;
 }
 
-.bookings-guide-text {
-  height: 200px;
-  width: 200px;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 40px;
+.guide-name {
+  position: absolute;
+  top: -15px;
+  left: 70px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .bookings-text {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 300px;
+  position: relative;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -77,8 +80,8 @@
 }
 
 .status-booking {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   background-color: $black-own;
   display: flex;
   flex-direction: column;
