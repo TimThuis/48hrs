@@ -1,11 +1,13 @@
 <div class="container-profile-edit-account">
+<%= render "shared/navbarback"  %>
   <div class="container padded">
     <div class="row">
       <div class="col-xs-12 col-sm-4 col-sm-offset-4">
         <div class="container-edit-profile">
+        <%= cl_image_tag current_user.photo, height: 150, width: 150, crop: :fill, :radius => :max, class: "profile-page-photo" %>
           <h1><b><%= @current_user.first_name %></b> add info</h1>
           <p>Make your profile compleet so guest can find you! So we can start your personal adventures.</p>
-          <div class="header-line"></div>
+          <div class="header-line-left"></div>
         </div>
         <%= simple_form_for @account, url: account_profile_path do |f| %>
         <%= f.error_notification %>
@@ -20,7 +22,6 @@
         <%= f.input :birthday %>
         <hr>
         <%= f.input :photo, label: 'Profile Picture' %>
-        <%= cl_image_tag current_user.photo, height: 150, width: 150, crop: :fill, :radius => :max, class: "profile-page-photo" %>
         <%= f.input :photo_cache, as: :hidden %>
         <%= f.input :bio %>
         <%= f.input :hour_rate %>

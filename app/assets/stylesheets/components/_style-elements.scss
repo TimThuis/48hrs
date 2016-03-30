@@ -5,6 +5,14 @@
   margin: 15px auto 30px auto;
 }
 
+.header-line-left {
+  height: 3px;
+  width: 100px;
+  background-color: black;
+  margin-top: 15px;
+  margin-bottom: 30px
+}
+
 .header-line-white {
   height: 2px;
   width: 80px;
@@ -57,13 +65,15 @@
   height: 100px;
   width: 100px;
   border-radius: 999px;
+  margin-left: 36%;
 }
 
 .cancel-button {
   color: #d9534f;
+  font-size: 30px;
   position: absolute;
-  background-color: $gray-lighter;
-  padding: 4px 10px;
+  top: -21px;
+  right:-12px;
 }
 
 .cancel-button:hover {

@@ -66,40 +66,56 @@ border: 3px solid white;
 
 .guide-name {
   position: absolute;
-  top: -15px;
-  left: 70px;
+  top: -10px;
+  left: 65px;
   color: $black-own;
   font-size: 16px;
   font-weight: bold;
 }
 
 .bookings-text {
-  height: 150px;
   width: 300px;
-  position: relative;
   background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 40px;
+  padding: 20px 0px 20px 45px;
   box-shadow: 7px 3px 15px rgba(0,0,0,0.1);
+  div {
+    padding: 5px 0;
+  }
+  i {
+    padding-right: 5px;
+    color: rgba(0,0,0,0.5);
+  }
 }
 
 .status-booking {
-  height: 150px;
   width: 150px;
+  position: relative;
   background-color: $black-own;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: white;
+  padding: 20px;
+  padding-bottom: 30px;
   box-shadow: 7px 3px 15px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.remove-icon {
-  position: absolute;
-  color: $yellow-own;
-  font-size: 30px;
-  bottom: -10px;
-  right: -10px;
+.price-info {
+  i {
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    top: 0;
+    letter-spacing: -5px;
+  }
+  p {
+    font-size: 40px;
+    color: white;
+  }
+}
+
+#map{
+margin-top:-60px;
 }
