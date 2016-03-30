@@ -13,21 +13,21 @@
 }
 
 .banner-photo {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("default-category.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("default-category.jpg");
   background-size: cover !important;
   min-height: 100vh;
 }
 
 .banner-photo-food {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("food.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("food.jpg");
 }
 
 .banner-photo-sport {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("active.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("active.jpg");
 }
 
 .banner-photo-party {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("party.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("party.jpg");
 }
 
 .container-boeking {
@@ -56,7 +56,7 @@
   top: -35px;
   right: 50%;
   margin-right: -135px;
-  color: #f0ad4e;
+  color: $yellow-own;
 }
 
 .form {
@@ -65,7 +65,7 @@
 }
 
 .price {
-  background-color: #f0ad4e;
+  background-color: $yellow-own;
   height: 40px;
   width: 40px;
   border-radius: 999px;
@@ -77,6 +77,7 @@
   z-index: 1;
   text-align: center;
   color: white;
+  font-weight: bold;
   font-size: 15px;
   line-height: 260%;
 }

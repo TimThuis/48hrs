@@ -1,25 +1,23 @@
 <div class="body-bookings-visitor">
-  <div class="banner-bookings-visitor">
     <%= render "shared/navbarspace"%>
+  <div class="banner-bookings-visitor">
     <% if @bookings.size == 1 %>
-    <h1><b>Congratulations</b> <%= @visitor.first_name %>
+      <h1><b>Congratulations</b> <%= @visitor.first_name %>,
       with your first adventure!</h1>
-      <% elsif @bookings.size > 1 %>
+    <% elsif @bookings.size > 1 %>
       <h1><b>Congratulations</b> <%= @visitor.first_name %>, with a new booking!</h1>
-      <% else %>
+    <% else %>
       <h1>You have no bookings</h1>
-      <% end %>
-      <%= link_to "homepage", root_path, :class => "btn btn-default btn-sm" %>
-    </div>
-    <div class="content-booking-visitor">
-      <div class="container">
-        <div class="row">
-          <div class="basic-bookings-card">
-            <% @bookings.each do |booking| %>
-            <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-
+    <% end %>
+  </div>
+      <div class="header-line"></div>
+  <div class="content-booking-visitor">
+    <div class="container">
+      <div class="basic-bookings-card">
+          <div class="row">
+        <% @bookings.each do |booking| %>
+            <div class="col-xs-12 col-sm-6">
               <div class="bookings-card">
-
                 <div class="guide-name">
                   <%= booking.guide.first_name %> <%= booking.guide.last_name %>
                 </div>
@@ -27,31 +25,31 @@
                 <%= image_tag booking.guide.photo, class: "bookings-photo" %>
 
                 <div class="bookings-text">
-                  <p><i class="fa fa-euro"></i> <%= booking.total_price %></p>
-                </i><%= booking.tour.category.name %></p>
-                <p><i class="fa fa-calendar"></i> <%= l(booking.date, format: "%a %d %b") %> -
-                  <i class="fa fa-clock-o"></i> <%= l(booking.check_in, format: :hours) %> - <%= l(booking.check_out, format: :hours)%> </p>
+                  <p><i class="fa fa-euro"></i> <%= booking.total_price %> | Category: <%= booking.tour.category.name %></p>
+                  <p>
+                    <i class="fa fa-calendar"></i> <%= l(booking.date, format: "%a %d %b") %> |
+                    <i class="fa fa-clock-o"></i> <%= l(booking.check_in, format: :hours) %> - <%= l(booking.check_out, format: :hours)%>
+                  </p>
+                  <p>
+                  <%= link_to 'cancel', cancel_visitor_booking_path(booking), method: :patch, data: {confirm: 'Are you sure to cancel this booking?'}, class: "cancel-button" %>
+                  </p>
                 </div>
 
                 <div class="status-booking text-center">
                   <% if booking.status == "pending" %>
-                  <p>status:</p>
-                  <p style="color:#F7DB61;"><i class="fa fa-pause-circle"></i> <%= booking.status %></p> <p><%= link_to 'cancel', cancel_visitor_booking_path(booking), method: :patch, data: {confirm: 'Are you sure to cancel this booking?'}, class: "cancel-button" %></p
+                    <p>status:</p>
+                    <p style="color:#F7DB61;"><i class="fa fa-pause-circle-o"></i> <%= booking.status %></p>
                   <% else %>
-                  <p>status:</p>
-                  <p style="color: #d9534f;"><i class="fa fa-times-circle"></i> <%= booking.status %></p>
+                    <p>status:</p>
+                    <p style="color: #d9534f;"><i class="fa fa-times-circle-o"></i> <%= booking.status %></p>
                   <% end %>
                 </div>
-
               </div>
 
             </div>
-            <% end %>
-
+        <% end %>
           </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
-

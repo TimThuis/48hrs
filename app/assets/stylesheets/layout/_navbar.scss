@@ -67,8 +67,8 @@
 }
 
 .navbar-wagon-link:active {
-  color: yellow;
-  text-decoration: none;
+  // color: yellow;
+  // text-decoration: none;
 }
 
 /* Navbar right button */
@@ -89,9 +89,9 @@
 }
 
 .navbar-wagon-button:focus {
-  color: white;
-  background: transparent;
-  border-color: yellow;
+  // color: white;
+  // background: transparent;
+  // border-color: yellow;
 }
 
 // /* Navbar search form */
@@ -164,10 +164,10 @@
   border-radius: 999px;
   height: 23px;
   width: 23px;
-  background-color: #F0AD4E;
-  color: white;
+  background-color: $yellow-own;
+  color: $black-own;
   text-align: center;
-  // font-weight: bold;
+  font-weight: bold;
   font-size: 15px;
   line-height: 150%;
   position: absolute;

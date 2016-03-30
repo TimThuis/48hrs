@@ -11,7 +11,7 @@
 }
 
 .banner-container {
-  height: 80vh;
+  max-height: 80vh;
   h1 {
     text-transform: uppercase;
     font-family: 'Roboto Condensed', "sans-serif";
@@ -54,13 +54,14 @@
     background: white;
     font-weight: bold;
     color: black;
-    transform: background-color 300ms ease;
+    transition: background-color 500ms ease;
 }
 
 .start-button:hover {
   color: black;
   background-color: $yellow-own;
   text-decoration: none;
+
 
 }
 
