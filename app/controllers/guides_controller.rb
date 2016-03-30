@@ -31,4 +31,3 @@ class GuidesController < ApplicationController
   end
 
 end
-in

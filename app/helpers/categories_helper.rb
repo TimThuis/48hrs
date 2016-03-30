@@ -22,7 +22,8 @@ module CategoriesHelper
 
   def category_item_css_class(category)
     if category.is_a?(Category)
-      "category-item category-item-#{category.name.underscore}"
+      active = category.id == params[:category_id].to_i
+      "category-item category-item-#{category.name.underscore} #{'is-active' if active} "
     else
       "category-item"
     end
