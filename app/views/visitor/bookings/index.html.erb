@@ -2,7 +2,7 @@
     <%= render "shared/navbarspace"%>
   <div class="banner-bookings-visitor">
     <% if @bookings.size == 1 %>
-      <h1><b>Congratulations</b> <%= @visitor.first_name %>
+      <h1><b>Congratulations</b> <%= @visitor.first_name %>,
       with your first adventure!</h1>
     <% elsif @bookings.size > 1 %>
       <h1><b>Congratulations</b> <%= @visitor.first_name %>, with a new booking!</h1>

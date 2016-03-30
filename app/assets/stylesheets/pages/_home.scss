@@ -3,7 +3,7 @@
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0, 0.4)), image_url("roofgarden.png");
   top: 0;
   background-size: cover !important;
-  height: 100vh;
+  max-height: 100vh;
   color: white;
   justify-content: space-around;
   align-items: center;
@@ -11,7 +11,7 @@
 }
 
 .banner-container {
-  height: 80vh;
+  max-height: 80vh;
   h1 {
     text-transform: uppercase;
     font-family: 'Roboto Condensed', "sans-serif";

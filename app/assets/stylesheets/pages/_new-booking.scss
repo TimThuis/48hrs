@@ -13,21 +13,21 @@
 }
 
 .banner-photo {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("default-category.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("default-category.jpg");
   background-size: cover !important;
   min-height: 100vh;
 }
 
 .banner-photo-food {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("food.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("food.jpg");
 }
 
 .banner-photo-sport {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("active.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("active.jpg");
 }
 
 .banner-photo-party {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("party.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("party.jpg");
 }
 
 .container-boeking {
