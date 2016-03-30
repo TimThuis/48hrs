@@ -22,6 +22,7 @@ class GuidesController < ApplicationController
 
     @extra_tours = @guide.tours
     @extra_tours = @extra_tours.where.not(id: @main_tour.id) if @main_tour
+    @reviews = Review.select { |review| review.booking.tour.user.first_name == "Emma" }
   end
 
   private
@@ -30,3 +31,4 @@ class GuidesController < ApplicationController
   end
 
 end
+in

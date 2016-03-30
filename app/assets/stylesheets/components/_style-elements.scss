@@ -31,22 +31,14 @@
 }
 
 .cube {
-  background-color: white;
-  height: 50px;
-  width: 50px;
+  background-color: $black-own;
+  height: 30px;
+  width: 30px;
   transform: rotate(45deg);
   position: absolute;
-  top: -25px;
+  bottom: -15px;
   right: 50%;
-  margin-right: -25px;
-  h2 {
-    transform: rotate(-45deg);
-    color: black;
-    font-size: 30px;
-    text-align: center;
-    line-height: 8%;
-    font-weight: bold;
-  }
+  margin-right: -15px;
 }
 
 .space-navbar {
@@ -69,7 +61,8 @@
 
 .cancel-button {
   color: #d9534f;
-  background-color: $black-own;
+  position: absolute;
+  background-color: $gray-lighter;
   padding: 4px 10px;
 }
 
