@@ -89,10 +89,45 @@ p.category-description {
   height: 125px;
   display: flex;
   position: relative;
-  border: solid 3px white;
+  border: 3px solid #EEEEEE;
   background-size: cover;
   justify-content: center;
   align-items: center;
+
+  .category-background-size{
+
+  }
+  &.category-item span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    flex-direction: column;
+  }
+
+  &.category-item-active span {
+    background-color: $black-own;
+  }
+
+  &.category-item-party span {
+    background-color: $black-own;
+  }
+
+  &.category-item-food span {
+    background-color: $black-own;
+  }
+
+  &.category-item-bar span {
+    background-color: $black-own;
+  }
+  &.category-item-cultural span {
+    background-color: $black-own;
+  }
+  &.category-item-shopping span {
+    background-color: $black-own;
+  }
+
   span {
     color: white;
     font-weight: 400;
