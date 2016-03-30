@@ -1,24 +1,23 @@
 <div class='guide-card-container'>
   <div class="guide-card">
     <div class="guide-card-avatar" style="background-image: url(<%= guide.photo %>)">
-      <div class="guide-card-booking">
-        <p class="rating">
-          <% guide.rating.times do %>
-          <i class="fa fa-star"></i>
-          <% end %>
-          <% (5 - guide.rating).times do %>
-          <i class="fa fa-star-o"></i>
-          <% end %>
-        </p>
-      </div>
+
     </div>
     <div class="guide-card-bio">
       <div class="guide-card-row">
         <h3><%= guide.first_name %> <%= guide.last_name %> </h3>
         <div class="card-action-icons">
-          <div class="card-booking">
+        <!--   <div class="card-booking">
             <a href=""><i class="fa fa-phone"></i></a>
             <a href=""><i class="fa fa-envelope"></i></a>
+          </div> -->
+          <div class="card-rating">
+            <% guide.rating.times do %>
+            <i class="fa fa-star"></i>
+            <% end %>
+            <% (5 - guide.rating).times do %>
+            <i class="fa fa-star-o"></i>
+            <% end %>
           </div>
         </div>
         <p class="guide-card-bio-description"><%= guide.bio %></p>
@@ -59,8 +58,8 @@
 <div class="guide-card-rating text-center">
  <hr>
  <div class="guide-card-avarage-rating">
-  <h4>Average Rating</h4>
   <p class="avarage-number"> <%= guide.rating %>.0</p>
+  <h4>Average Rating</h4>
 </div>
 </div>
 
