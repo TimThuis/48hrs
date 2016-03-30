@@ -1,10 +1,8 @@
 .header-line {
   height: 3px;
-  width: 80px;
+  width: 100px;
   background-color: black;
-  margin-bottom: 30px;
-  margin-top: 15px;
-  // margin: 0 auto 30px auto;
+  margin: 15px auto 30px auto;
 }
 
 .header-line-white {
@@ -71,6 +69,8 @@
 
 .cancel-button {
   color: #d9534f;
+  background-color: $black-own;
+  padding: 4px 10px;
 }
 
 .cancel-button:hover {
