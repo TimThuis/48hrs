@@ -50,27 +50,27 @@ p.category-description {
   }
 
   .category-banner-bar {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("bar.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("bar.jpg");
   }
 
   .category-banner-cultural {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("culture.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("culture.jpg");
   }
 
   .category-banner-food {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("food.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("food.jpg");
   }
 
   .category-banner-party {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("party.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("party.jpg");
   }
 
   .category-banner-active {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("activity.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("activity.jpg");
   }
 
   .category-banner-shopping {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("shopping.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("shopping.jpg");
   }
 
   h1 {
