@@ -18,7 +18,6 @@
   &-avatar{
     background-size: cover;
     text-align: center;
-    background-color: #3C3838;
     height: 300px;
     width: 100%;
     display: flex;
@@ -28,6 +27,14 @@
 
     .rating {
       padding-bottom: 35px;
+      h4 {
+        margin: 0;
+        margin-bottom: 30px;
+        font-size: 14px;
+        opacity: .6;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
     }
 
     @media (max-width: $screen-sm) {
