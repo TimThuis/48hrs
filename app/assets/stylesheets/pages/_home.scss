@@ -30,10 +30,10 @@
   max-height: 500px;
   opacity: 0;
 
-  animation: fadeInSlow 1s .5s forwards;
+  animation: fadeInSlowDown 1s .5s forwards;
 }
 
-@keyframes fadeInSlow {
+@keyframes fadeInSlowDown {
   0%{
     opacity: 0;
     transform: translateY(10%);

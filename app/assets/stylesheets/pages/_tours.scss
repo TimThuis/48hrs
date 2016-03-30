@@ -2,6 +2,9 @@ p.category-description {
   color: white;
   margin-bottom: 50px;
   font-size: 20px;
+  position: relative;
+  opacity: .7;
+  font-weight: 100;
 }
 
 @keyframes fadeInSlow {
@@ -28,7 +31,6 @@ p.category-description {
     right: 0;
     height: 367px;
     width: 100%;
-    z-index: -3;
 
     opacity: 0;
 
@@ -39,7 +41,7 @@ p.category-description {
       left: 0;
       right: 0;
       height: 367px;
-      position: fixed;
+      position: absolute;
       background: #2B2B2B;
       overflow: hidden;
     }
@@ -66,6 +68,7 @@ p.category-description {
   }
 
   h1 {
+    position: relative;
     color: white;
   }
 }
@@ -83,7 +86,6 @@ p.category-description {
   max-width: 250px;
 }
 .category-cards > .category-item {
-  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
   align-self: center;
   width: 125px;
   height: 125px;
@@ -93,6 +95,18 @@ p.category-description {
   background-size: cover;
   justify-content: center;
   align-items: center;
+
+  &.is-active {
+    span {
+      background-color: white !important;
+      color: $black-own;
+      font-weight: 600;
+
+      i {
+        color: $yellow-own;
+      }
+    }
+  }
 
   .category-background-size{
 
@@ -163,6 +177,12 @@ p.category-description {
 
 .flex-1 {
   flex: 1;
+}
+
+.media-flex-1 {
+  border: 3px solid #EEEEEE;
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
 }
 
 .profiles-container {
@@ -336,6 +356,8 @@ p.category-description {
 
   .main-container {
     width: 90%;
+    position: relative;
+    position: relative;
   }
 }
 
