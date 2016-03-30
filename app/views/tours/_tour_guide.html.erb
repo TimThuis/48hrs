@@ -16,10 +16,12 @@
       <div class="media-flex-1">
         <div class="category-cards">
           <% @categories.each do |category| %>
-          <div class="category-item" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url(<%= category.photo %>)">
-            <%= link_to "", tours_path({category_id: category.id}), class: "gradient-link" %>
-            <span style="background-color: black;"> <i class="mdi mdi-account-outline"></i> <%= category.name  %></span>
-          </div>
+            <div class="<%= category_item_css_class(category) %>" style="background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5))">
+              <%= link_to "", tours_path({category_id: category.id}), class: "gradient-link" %>
+              <span>
+                <i class="<%= category_icon_css_class(category) %>"></i> <%= category.name  %>
+              </span>
+            </div>
           <% end %>
         </div>
       </div>
