@@ -103,9 +103,9 @@ henna.save!
 
 puts "create category"
 
-active = Category.create!(name: "Active", description: "Activities or stay active at a slightly more moderate pace throughout Amsterdam")
-active[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256332/sport-sm_bhgpwr.jpg"
-active.save!
+sport = Category.create!(name: "Sport", description: "Activities or stay active at a slightly more moderate pace throughout Amsterdam")
+sport[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256332/sport-sm_bhgpwr.jpg"
+sport.save!
 
 party = Category.create!(name: "Party", description: "All the parties in Amsterdam - the type of music, crowd and atmosphere.")
 party[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256331/party-sm_bm1gna.jpg"
@@ -134,9 +134,9 @@ puts "create tour"
 
 tour4 = Tour.create!(user: kim, category: cultural, description: "A walking tour tailored around your wants and needs! Visit historical places, like the Nieuwmarkt, Jewish quarter, Dam, narrow streets and attractive patios..")
 tour5 = Tour.create!(user: sara, category: cultural, description: "Let the history of Amsterdam be revealed to you in this informative and imaginative guided city walk through Amsterdam's historical city centre.")
-tour6 = Tour.create!(user: sara, category: active, description: "An active or tranquil biking tour through Amsterdam’s city centre, by bike everything is possible!")
+tour6 = Tour.create!(user: sara, category: sport, description: "An active or tranquil biking tour through Amsterdam’s city centre, by bike everything is possible!")
 tour7 = Tour.create!(user: hendrik, category: party, description: "Arrange your trip in advance and start your stay in Amsterdam without stress. Avoid long taxi lines. Enjoy the ride to your Hotel.")
-tour8 = Tour.create!(user: peter, category: active, description: "Yellow Bike has put together a safely guided bicycle tour which will give you a fascinating picture of this famous canal city’s rich history.")
+tour8 = Tour.create!(user: peter, category: sport, description: "Yellow Bike has put together a safely guided bicycle tour which will give you a fascinating picture of this famous canal city’s rich history.")
 tour9 = Tour.create!(user: emma, category: food, description: "A special experience; enjoy an extensive four course dinner aboard a canal boat.")
 tour10 = Tour.create!(user: peter, category: cultural, description: "A wonderful puzzle game for international guests in Amsterdam.")
 tour11 = Tour.create!(user: emma, category: cultural, description: "The eastern harbour area: a wonderful place for a walk. Great, modern architecture in a historical environment.")
@@ -146,7 +146,7 @@ tour14 = Tour.create!(user: angel, category: shopping, description: "We will tak
 tour15 = Tour.create!(user: blane, category: bar, description: "Visit the Hard Rock Cafe in Amsterdam and be impressed by the unique atmosphere")
 tour16 = Tour.create!(user: angel, category: cultural, description: "I would love to tailor this tour to your personal interests")
 tour17 = Tour.create!(user: sjors, category: cultural, description: "Private City Tour by day or by night for very affordable price! The new and fun way to explore Amsterdam on board of an eco-friendly electric tuk tuk.")
-tour18 = Tour.create!(user: hendrik, category: active, description: "A two-hour personalised museum tour to learn all that you can about the great master. Be ready to explore colour, movement and a turbulent life trajectory")
+tour18 = Tour.create!(user: hendrik, category: sport, description: "A two-hour personalised museum tour to learn all that you can about the great master. Be ready to explore colour, movement and a turbulent life trajectory")
 tour19 = Tour.create!(user: hendrik, category: cultural, description: "It awaits you an exciting private museum tour by an art historian including the Stedelijk Museum and Van Gogh Museum in Amsterdam.")
 tour20 = Tour.create!(user: sjors, category: shopping, description: "On this tour you will discover various windmills, dutch cheese, clogs as well as the wonderful landscape around Amsterdam.")
 tour21 = Tour.create!(user: quoc, category: party, description: "Private charters including skipper for small groups and individual guests.")
@@ -183,10 +183,10 @@ fourth_review = Review.create!(booking: booking4 ,content: "Second review of Bla
 
 # Review Emma 9 / 11 / 26
 
-r1e = Review.create!(booking: booking7 ,content: "Lovely lady,fantastic tour great knowledge of Amsterdam. Will definately use local guides ", rating: 4)
-r2e = Review.create!(booking: booking8 ,content: "Emma was the perfect guide for us. The pre-arrival communication set the tone and allowed her to make the most of our short time in Amsterdam. She was on-time and ready with tickets.", rating: 5)
-r3e = Review.create!(booking: booking9 ,content: "Awesome tour....would do again. We took a tour from Emma in 2011 and liked it so much, we used him again when we were in Amsterdam again.", rating: 3)
-r4e = Review.create!(booking: booking10 ,content: "Emma met us on a gloomy day in Amsterdam, but for the next 4 hrs we were filled with pleasure and delight as we went on a special walk through Amsterdam.", rating: 5)
+# r1e = Review.create!(booking: booking7 ,content: "Lovely lady,fantastic tour great knowledge of Amsterdam. Will definately use local guides ", rating: 4)
+# r2e = Review.create!(booking: booking8 ,content: "Emma was the perfect guide for us. The pre-arrival communication set the tone and allowed her to make the most of our short time in Amsterdam. She was on-time and ready with tickets.", rating: 5)
+# r3e = Review.create!(booking: booking9 ,content: "Awesome tour....would do again. We took a tour from Emma in 2011 and liked it so much, we used him again when we were in Amsterdam again.", rating: 3)
+# r4e = Review.create!(booking: booking10 ,content: "Emma met us on a gloomy day in Amsterdam, but for the next 4 hrs we were filled with pleasure and delight as we went on a special walk through Amsterdam.", rating: 5)
 
 ####
 
