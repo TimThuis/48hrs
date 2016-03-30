@@ -76,8 +76,9 @@
   &-about {
     background-color: white;
     padding: 20px 60px;
-    h3 + p {
+    h3 {
       color: $black-own;
+      text-transform: uppercase;
     }
   }
 }

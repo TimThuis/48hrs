@@ -3,7 +3,7 @@ p.category-description {
   margin-bottom: 50px;
   font-size: 20px;
   position: relative;
-  opacity: .7;
+  opacity: .8;
   font-weight: 100;
 }
 
@@ -29,6 +29,7 @@ p.category-description {
     top: 0;
     left: 0;
     right: 0;
+    background-position: center center;
     height: 367px;
     width: 100%;
 
@@ -44,15 +45,16 @@ p.category-description {
       position: absolute;
       background: #2B2B2B;
       overflow: hidden;
+
     }
   }
 
   .category-banner-bar {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("travel.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("bar.jpg");
   }
 
   .category-banner-cultural {
-
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("culture.jpg");
   }
 
   .category-banner-food {
@@ -64,7 +66,11 @@ p.category-description {
   }
 
   .category-banner-active {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("active.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("activity.jpg");
+  }
+
+  .category-banner-shopping {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("shopping.jpg");
   }
 
   h1 {
@@ -79,6 +85,7 @@ p.category-description {
 }
 
 .category-cards {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
   display: flex;
   flex-wrap: wrap;
   width:100%;
@@ -179,11 +186,6 @@ p.category-description {
   flex: 1;
 }
 
-.media-flex-1 {
-  border: 3px solid #EEEEEE;
-  position: relative;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
-}
 
 .profiles-container {
   flex: 1;
