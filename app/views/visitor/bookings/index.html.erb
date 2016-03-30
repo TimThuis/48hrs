@@ -29,7 +29,7 @@
                 <div class="bookings-text">
                   <p><i class="fa fa-euro"></i> <%= booking.total_price %> | Category: <%= booking.tour.category.name %></p>
                   <p>
-                    <i class="fa fa-calendar"></i> <%= l(booking.date, format: "%a %d %b") %>,
+                    <i class="fa fa-calendar"></i> <%= l(booking.date, format: "%a %d %b") %>
                     <i class="fa fa-clock-o"></i> <%= l(booking.check_in, format: :hours) %> - <%= l(booking.check_out, format: :hours)%>
                   </p>
                   <p>
