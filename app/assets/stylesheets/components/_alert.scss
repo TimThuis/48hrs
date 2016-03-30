@@ -9,7 +9,8 @@
   border: 0;
 }
 .alert-info {
-  background: #f0ad4e;
+  background: $yellow-own;
+  color: $black-own;
   // position: absolute;
 }
 .alert-warning {

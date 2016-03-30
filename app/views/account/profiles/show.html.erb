@@ -12,11 +12,12 @@
           <% end %>
           <h1><b><%= current_user.first_name %></b> profile page</h1>
           <p>This is your own personal space, check if the information is correct so visitor's will go on a adventure with you !</p>
-          <div class="header-line"></div>
+          <div class="header-line-left"></div>
         </div>
         <div class="account-info">
           <h2>Basic</h2>
           <p>
+            <i class="fa fa-user"></i>
             <%= current_user.first_name %>
             <%= current_user.last_name %>
           </p>
@@ -55,6 +56,7 @@
             <%= current_user.hour_rate %>
           </p>
         </div>
+        <hr>
         <div class="button-links">
           <%= link_to "edit", edit_account_profile_path, class: "btn btn-primary"  %>
           <%= link_to "Homepage", root_path, :class => "btn btn-default" %>

@@ -1,6 +1,7 @@
 // banner
 .banner {
   background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0, 0.4)), image_url("roofgarden.png");
+  background-position: center center;
   top: 0;
   background-size: cover !important;
   height: 100vh;
@@ -54,7 +55,7 @@
     background: white;
     font-weight: bold;
     color: $black-own;
-    transition: background-color 500ms ease;
+    transition: background-color 300ms ease;
 }
 
 .start-button:hover {

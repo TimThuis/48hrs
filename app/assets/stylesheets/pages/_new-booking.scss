@@ -13,21 +13,34 @@
 }
 
 .banner-photo {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("default-category.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("travel.jpg");
   background-size: cover !important;
   min-height: 100vh;
+  background-position: center center;
 }
 
 .banner-photo-food {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("food.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("food-table.jpg");
 }
 
-.banner-photo-sport {
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("active.jpg");
+.banner-photo-active {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("sport.jpg");
 }
 
 .banner-photo-party {
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("party.jpg");
+}
+
+.banner-photo-bar {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("bar.jpg");
+}
+
+.banner-photo-cultural {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("church.jpg");
+}
+
+.banner-photo-shopping {
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("store.jpg");
 }
 
 .container-boeking {
@@ -76,8 +89,7 @@
   margin-left: -50px;
   z-index: 1;
   text-align: center;
-  color: white;
-  font-weight: bold;
+  color: $black-own;
   font-size: 15px;
   line-height: 260%;
 }
@@ -123,5 +135,10 @@
 }
 
 #button-new-booking {
-  margin-top: 20px;
+  margin-top: 15px;
+  color: $yellow-own;
+  border: 0;
+  padding: 10px 15px;
+  border-radius: 2px;
+  background-color: $black-own;
 }
