@@ -49,7 +49,7 @@ angel.save!
 
 emma = User.new(email: "Emma@email.com", password: "12345678", guide: true, first_name: "Emma", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Fighting to save the Universe from The Powers", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+phone:Faker::PhoneNumber.cell_phone, bio: "Fighting to save the Universe from The Powers", hour_rate: Faker::Number.between(6, 20), rating: 5)
 emma[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg"
 emma.save!
 
