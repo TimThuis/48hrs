@@ -142,3 +142,25 @@
   border-radius: 2px;
   background-color: $black-own;
 }
+
+.selected-day {
+  background-color: rgba(0,0,0,0.1);
+  padding: 10px 15px;
+  border-radius: 3px;
+  color: $black-own;
+  font-weight: 600;
+  border-collapse: left;
+
+  &:hover {
+    color: $black-own;
+    text-decoration: none;
+    background-color: rgba(0,0,0,0.2);
+  }
+  &:active {
+    color: $black-own;
+   text-decoration: none;
+   background-color: rgba(0,0,0,0.2);
+ }
+}
+
+

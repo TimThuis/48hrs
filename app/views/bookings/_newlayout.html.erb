@@ -31,11 +31,20 @@
               <% end %>
             </div>
             <hr>
+            <a class="selected-day" href="">Tomorrow</a>
           </div>
           <div class="form">
             <%= simple_form_for(@booking, url: tour_bookings_path(@tour)) do |f| %>
             <%= f.error_notification %>
-            <%= f.input :date, start_year: Time.now.year, start_month: Time.now.month %>
+            <%= f.input :day, as: :radio_buttons, collection: \
+          [['Today', 'today'], ['Tomorrow', 'tomorrow']], selected: 'today' %>
+
+
+            <%#= f.radio_button :day, 'Today', :checked => true %>
+            <%#= label :day, 'Today', class: "selected-day" %>
+            <%#= f.radio_button :day, 'Tommorrow' %>
+            <%#= label :day, 'Tommorrow', class: "selected-day" %>
+
             <div class="dates">
               <div>
                 <%= f.input :check_in, minute_step: 15, input_html: { class: 'book-date' } %>
