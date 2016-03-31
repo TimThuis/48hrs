@@ -15,7 +15,7 @@
   padding: 0px 30px;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: absolute;
   width: 100%;
   z-index: 1;
 }
@@ -80,7 +80,7 @@
   color: white;
   font-size: 12px;
   border: 0.5px solid white;
-  border-radius: 0px;
+  border-radius: 2px;
 }
 .navbar-wagon-button:hover {
   color: black;

@@ -32,10 +32,12 @@
                   <%= booking.guide.first_name %>
                   <%= booking.guide.last_name %>
                   </div>
-                  <%#= link_to image_tag(booking.guide.photo), detail_guide_path(booking.guide), remote: true, class: "bookings-photo" %>
+                  <%= link_to detail_guide_path(booking.guide), remote: true do %>
 
                   <%= image_tag booking.guide.photo, \
                   class: "bookings-photo" %>
+
+                  <% end %>
 
                   <div class="bookings-text">
                     <div>

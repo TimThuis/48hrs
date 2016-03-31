@@ -35,7 +35,7 @@
           <div class="form">
             <%= simple_form_for(@booking, url: tour_bookings_path(@tour)) do |f| %>
             <%= f.error_notification %>
-            <%= f.input :date %>
+            <%= f.input :date, start_year: Time.now.year, start_month: Time.now.month %>
             <div class="dates">
               <div>
                 <%= f.input :check_in, minute_step: 15, input_html: { class: 'book-date' } %>
