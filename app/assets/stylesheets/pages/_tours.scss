@@ -215,7 +215,7 @@ p.category-description {
   .card-who{
     display: flex;
     align-items: center;
-    flex:0 0 50%;
+    flex: 1;
     padding: 0 20px;
     p.card-name {
       font-weight: 600;
@@ -227,6 +227,31 @@ p.category-description {
   p.card-rating {
     color: #DEDFE1;
   }
+}
+
+.card-flex-who-items {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.card-flex-name-item {
+  flex: 0 0 70%;
+}
+
+.card-flex-hrs-item {
+  flex: 0 0 30%;
+  display: flex;
+  justify-content: center;
+  color: white;
+  opacity: 0.8;
+  .remain-hrs {
+    font-size: 15px;
+  }
+}
+
+.remain-hrs-label {
+  font-size: 15px
 }
 
 .card-action-icons {
@@ -368,6 +393,8 @@ p.category-description {
     position: relative;
   }
 }
+
+
 
 
 

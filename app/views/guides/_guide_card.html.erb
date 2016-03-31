@@ -30,7 +30,7 @@
     <div class="guide-card-about">
       <div class="flex-card-current-category">
         <h3><i class="<%= category_icon_css_class(main_tour.category) %>"></i>
-          <%= main_tour.category.name %> <span class="hrs-left"><%= guide.available_hours %> hrs left</span></h3>
+          <%= main_tour.category.name %> <span class="hrs-left"><%= guide.available_hours %> hrs remaining </span></h3>
 
           <div class="flex-card-booking-about">
             <p><%= main_tour.description %></p>
@@ -49,9 +49,10 @@
 
        <% extra_tours.each do |tour| %>
        <div class="guide-card-tour">
-         <i class="<%= category_icon_css_class(main_tour.category) %>"></i>
+         <i class="<%= category_icon_css_class(tour.category) %>"></i>
          <p class="booking-description"><%= tour.description %></p>
-         <span class"hrs-left"><%= guide.available_hours %> hrs left</span>
+         <span class"hrs-left"><i class="time-icon mdi mdi-timelapse
+"></i><%= guide.available_hours %> hrs </span>
          <%= link_to detail_guide_path(guide, category_id: tour.category_id), remote: true, class: "button-checking" do %>
          <p>Check</p>
          <% end %>

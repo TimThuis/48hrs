@@ -167,14 +167,18 @@ a.button-booking {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #F6F6F6;
+  border: 2px solid #F6F6F6;
   margin: 20px 0;
-  i {
+  i{
     font-size: 30px;
     display: flex;
     justify-content: center;
     flex: 2;
     color: $yellow-own;
+  }
+  .time-icon {
+     color: #C7C7C7;
+     font-size: 20px;
   }
   span {
     color: #C7C7C7;
@@ -262,7 +266,7 @@ a.button-checking {
   justify-content: center;
   align-items: center;
   span {
-    background: white;
+    background: $yellow-own;
     flex: 0 0 75px;
     height: 75px;
     border-radius: 50%;
