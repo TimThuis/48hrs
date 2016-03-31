@@ -7,7 +7,7 @@ module CategoriesHelper
     case name
     when "food"
       "mdi mdi-food-variant"
-    when "active"
+    when "sport"
       "mdi mdi-bike"
     when "cultural"
       "mdi mdi-church"
