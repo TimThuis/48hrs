@@ -142,3 +142,45 @@
   border-radius: 2px;
   background-color: $black-own;
 }
+
+
+.new-booking-radios {
+  background-color: rgba(0,0,0,0.1);
+  color: $black-own;
+  padding: 10px 20px;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+
+  input {
+    display: none
+  }
+
+  // active state man :o
+  input:checked + label {
+    color: $yellow-own;
+  }
+}
+
+// .selected-day {
+//   background-color: rgba(0,0,0,0.1);
+//   padding: 10px 15px;
+//   border-radius: 3px;
+//   color: $black-own;
+//   font-weight: 600;
+//   border-collapse: left;
+
+//   &:hover {
+//     color: $black-own;
+//     text-decoration: none;
+//     background-color: rgba(0,0,0,0.2);
+//   }
+//   &:active {
+//     color: $black-own;
+//    text-decoration: none;
+//    background-color: rgba(0,0,0,0.2);
+//  }
+// }
+
+
