@@ -57,13 +57,13 @@
   border: 2px solid $yellow-own;
   border-radius: 3px;
   transition: all 300ms ease;
-  &:hover {
+}
+  .start-button:hover {
     color: $yellow-own;
     background-color: $black-own;
     text-decoration: none;
     border: 2px solid $black-own;
   }
-}
 
 .category-button {
   background-color: transparent;
