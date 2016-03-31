@@ -29,7 +29,7 @@ p.category-description {
   position: relative;
 
   .category-banner {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), url("travel.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("travel.jpg");
     position: absolute;
     background-size: cover !important;
     top: 0;

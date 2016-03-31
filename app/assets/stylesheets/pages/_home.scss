@@ -1,6 +1,6 @@
 // banner
 .banner {
-  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0, 0.4)), image_url("roofgarden.png");
+  background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0, 0.5)), image_url("roofgarden.png");
   background-position: center center;
   top: 0;
   background-size: cover !important;
@@ -48,22 +48,21 @@
 }
 
 .start-button {
-    padding: 13px 20px;
-    text-align: center;
-    text-transform: uppercase;
-    font-size: 16px;
-    background: white;
-    font-weight: bold;
-    color: $black-own;
-    transition: background-color 300ms ease;
-}
-
-.start-button:hover {
-  color: black;
-  background-color: $yellow-own;
-  text-decoration: none;
-
-
+  padding: 13px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  color: $yellow-own;
+  border: 2px solid $yellow-own;
+  border-radius: 3px;
+  transition: all 300ms ease;
+  &:hover {
+    color: $yellow-own;
+    background-color: $black-own;
+    text-decoration: none;
+    border: 2px solid $black-own;
+  }
 }
 
 .category-button {
@@ -95,7 +94,7 @@
 }
 
 .col-max {
-    max-width:250px;
+  max-width:250px;
 }
 
 .item {
