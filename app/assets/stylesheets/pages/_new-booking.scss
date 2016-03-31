@@ -145,13 +145,17 @@
 
 
 .new-booking-radios {
-  background-color: rgba(0,0,0,0.1);
-  color: $black-own;
-  padding: 10px 20px;
+  background-color: $black-own;
+  color: white;
+  padding: 10px 20px 7px 20px;
   border-radius: 3px;
   display: flex;
   justify-content: space-around;
-  margin: 20px 0;
+  margin: 10px 0;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 400;
 
   input {
     display: none
