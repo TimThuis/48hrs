@@ -5,7 +5,7 @@
   <%= render "shared/navbarspace" %>
   <div class="main-container">
     <% if @selected_category.is_a?(Category) %>
-      <h1 class="text-center"><%= @selected_category.name %> <b>Guides</b></h1>
+      <h1 class="title-tour text-center"><%= @selected_category.name %> <b>Guides</b></h1>
       <p class="category-description text-center"><%= @selected_category.description %></p>
       <% else %>
         <h1 class="text-center"> Choose your personal <b>Guides</b></h1>
