@@ -65,7 +65,7 @@ p.category-description {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("party.jpg");
   }
 
-  .category-banner-active {
+  .category-banner-sport {
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)), image_url("activity.jpg");
   }
 
@@ -127,7 +127,7 @@ p.category-description {
     flex-direction: column;
   }
 
-  &.category-item-active span {
+  &.category-item-sport span {
     background-color: $black-own;
   }
 
