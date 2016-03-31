@@ -183,10 +183,10 @@ fourth_review = Review.create!(booking: booking4 ,content: "Second review of Bla
 
 # Review Emma 9 / 11 / 26
 
-# r1e = Review.create!(booking: booking7 ,content: "Lovely lady,fantastic tour great knowledge of Amsterdam. Will definately use local guides ", rating: 4)
-# r2e = Review.create!(booking: booking8 ,content: "Emma was the perfect guide for us. The pre-arrival communication set the tone and allowed her to make the most of our short time in Amsterdam. She was on-time and ready with tickets.", rating: 5)
-# r3e = Review.create!(booking: booking9 ,content: "Awesome tour....would do again. We took a tour from Emma in 2011 and liked it so much, we used him again when we were in Amsterdam again.", rating: 3)
-# r4e = Review.create!(booking: booking10 ,content: "Emma met us on a gloomy day in Amsterdam, but for the next 4 hrs we were filled with pleasure and delight as we went on a special walk through Amsterdam.", rating: 5)
+r1e = Review.create!(booking: booking7 ,content: "Lovely lady,fantastic tour great knowledge of Amsterdam. Will definately use local guides ", rating: 4)
+r2e = Review.create!(booking: booking8 ,content: "Emma was the perfect guide for us. The pre-arrival communication set the tone and allowed her to make the most of our short time in Amsterdam. She was on-time and ready with tickets.", rating: 5)
+r3e = Review.create!(booking: booking9 ,content: "Awesome tour....would do again. We took a tour from Emma in 2011 and liked it so much, we used him again when we were in Amsterdam again.", rating: 3)
+r4e = Review.create!(booking: booking10 ,content: "Emma met us on a gloomy day in Amsterdam, but for the next 4 hrs we were filled with pleasure and delight as we went on a special walk through Amsterdam.", rating: 5)
 
 ####
 
