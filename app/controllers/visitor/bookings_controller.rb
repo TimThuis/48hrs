@@ -3,7 +3,7 @@ class Visitor::BookingsController < ApplicationController
 
   def index #view
     if user_signed_in?
-      @bookings = current_user.trips
+      @bookings = current_user.trips.sort {|trip1, trip2| trip2[:date] <=> trip1[:date]}
       @visitor = current_user
 
 

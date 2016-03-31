@@ -79,8 +79,8 @@ peter.save!
 
 
 # Visitor
-tim = User.new(email: "tim@email.com", password: "12345678", guide: false, first_name: "Tim", last_name: "Thuis", phone:"+31 6 1234 5678", photo: "")
-tim[:photo] = ""
+tim = User.new(email: "tim@email.com", password: "12345678", guide: false, first_name: "Tim", last_name: "Thuis", phone:"+31 6 1234 5678")
+tim[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459413443/tim-profile_eowfgp.jpg"
 tim.save!
 
 andre = User.new(email: "andre@email.com", password: "12345678", guide: false, first_name: "Andre", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
@@ -161,12 +161,12 @@ tour27 = Tour.create!(user: sara, category: shopping, description: "Shop in uniq
 
 puts "create booking"
 
-booking1 = Booking.create!(visitor: tim, guide: sara, tour: tour23, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00", status:"pending", total_price: 0, hour_rate: 15)
-booking2 = Booking.create!(visitor: tim, guide: quoc, tour: tour12, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00", status:"cancel", total_price: 0, hour_rate: 15)
-booking3 = Booking.create!(visitor: tim, guide: chantal, tour: tour13, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"confirm", total_price: 0, hour_rate: 15)
-booking4 = Booking.create!(visitor: tim, guide: sjors, tour: tour20, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"pending", total_price: 0, hour_rate: 15)
-booking5 = Booking.create!(visitor: tim, guide: quoc, tour: tour21, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"pending", total_price: 0, hour_rate: 15)
-booking6 = Booking.create!(visitor: tim, guide: quoc, tour: tour22, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"cancel", total_price: 0, hour_rate: 15)
+booking1 = Booking.create!(visitor: tim, guide: sara, tour: tour23, date:"Tue, 10 Feb 2016", check_in:"2016-02-10 16:30:00 UTC", check_out:"2016-02-10 21:00:00 UTC", status:"confirm", total_price: 52.5, hour_rate: 15)
+booking2 = Booking.create!(visitor: tim, guide: peter, tour: tour12, date:"Tue, 3 Mar 2016", check_in:"2016-01-01 10:00:00 UTC", check_out:"2016-01-01 15:00:00", status:"cancel", total_price: 30, hour_rate: 6)
+booking4 = Booking.create!(visitor: tim, guide: sjors, tour: tour20, date:"Tue, 28 Jan 2016", check_in:"2016-03-17 21:00:00 UTC", check_out:"2016-03-17 23:00:00 UTC", status:"confirm", total_price: 20, hour_rate: 10)
+# booking3 = Booking.create!(visitor: tim, guide: chantal, tour: tour13, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"confirm", total_price: 0, hour_rate: 15)
+# booking5 = Booking.create!(visitor: tim, guide: quoc, tour: tour21, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"pending", total_price: 0, hour_rate: 15)
+# booking6 = Booking.create!(visitor: tim, guide: quoc, tour: tour22, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"cancel", total_price: 0, hour_rate: 15)
 
 booking7 = Booking.create!(visitor: andre, guide: emma, tour: tour9, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"cancel", total_price: 30, hour_rate: 15)
 booking8 = Booking.create!(visitor: jan, guide: emma, tour: tour11, date:"Tue, 01 Jan 2016", check_in:"2016-01-04 07:00:00 UTC", check_out:"2016-01-04 9:00:00 UTC", status:"cancel", total_price: 30, hour_rate: 15)
@@ -176,10 +176,10 @@ booking10 = Booking.create!(visitor: henna, guide: emma, tour: tour26, date:"Tue
 
 puts "create review"
 
-first_review = Review.create!(booking: booking1 ,content: "First review of Q", rating: 5)
-second_review = Review.create!(booking: booking2 ,content: "Second review of Q", rating: 5)
-thirth_review = Review.create!(booking: booking3 ,content: "First review of Blane", rating: 5)
-fourth_review = Review.create!(booking: booking4 ,content: "Second review of Blane", rating: 5)
+# first_review = Review.create!(booking: booking1 ,content: "First review of Q", rating: 5)
+# second_review = Review.create!(booking: booking2 ,content: "Second review of Q", rating: 5)
+# thirth_review = Review.create!(booking: booking3 ,content: "First review of Blane", rating: 5)
+# fourth_review = Review.create!(booking: booking4 ,content: "Second review of Blane", rating: 5)
 
 # Review Emma 9 / 11 / 26
 
@@ -193,3 +193,4 @@ r4e = Review.create!(booking: booking10 ,content: "Emma met us on a gloomy day i
 puts "users, bookings, tours, reviews, categories created!"
 
 
+#

@@ -32,6 +32,7 @@
                   <%= booking.guide.first_name %>
                   <%= booking.guide.last_name %>
                   </div>
+                  <%#= link_to image_tag(booking.guide.photo), detail_guide_path(booking.guide), remote: true, class: "bookings-photo" %>
 
                   <%= image_tag booking.guide.photo, \
                   class: "bookings-photo" %>
@@ -52,12 +53,14 @@
                   </div>
 
                   <div class="status-booking text-center">
-                    <%= link_to cancel_visitor_booking_path(booking), \
-                      method: :patch, data: {confirm: 'Are you sure to cancel this booking?'}, \
-                      class: "cancel-button" do %>
-                        <i class="fa fa-times-circle-o"></i>
-                      <% end %>
-
+                    <% if booking.status == "pending" %>
+                      <%= link_to cancel_visitor_booking_path(booking), \
+                        method: :patch, data: {confirm: 'Are you sure to cancel this booking?'}, \
+                        class: "cancel-button" do %>
+                          <i class="fa fa-times-circle-o icon-cancel-button"></i>
+                          <i class="fa fa-circle icon-cancel-button-back" style="color: #EEEEEE"></i>
+                        <% end %>
+                    <% end %>
                     <div class="price-info">
                       <p>
                       <i class="fa fa-euro"></i>
@@ -70,6 +73,11 @@
                         <div style="color:#F7DB61;">
                           <%= booking.status %>
                         </div>
+                      <% elsif booking.status == "confirm" %>
+                        <div style="color: #5cb85c;;">
+                          <%= booking.status %>
+                        </div>
+
                       <% else %>
                         <div style="color: #d9534f;">
                           <%= booking.status %>
