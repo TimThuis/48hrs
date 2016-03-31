@@ -19,61 +19,61 @@ puts "create user"
 # Guides
 quoc = User.new(email: "q@email.com", password: "12345678", guide: true, first_name: "Quoc", last_name: "Bui", \
 birthday: "1990-11-02", photo: "", street: "Vondelparklaan 22", zipcode: "1234 AB", city: "Amsterdam", \
-phone:"+31 6 1234 5678", bio: "Software consultant, OSS contributor, blogger", hour_rate: 10, rating: 3)
+phone:"+31 6 1234 5678", bio: "Software consultant, OSS contributor, blogger", hour_rate: 10, rating: 3, available_hours: Faker::Number.between(1, 48))
 quoc[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459254858/q_xctupa.jpg"
 quoc.save!
 
 blane = User.new(email: "blane@email.com", password: "12345678", guide: true, first_name: "Blane", last_name: "Matsardji", \
 birthday: "1992-05-21", photo: "", street: "De pijp 100", zipcode: "1234 AB", city: "Amsterdam", \
-phone:"+31 6 1234 5678", bio: "Hacker & Author", hour_rate: 15, rating: 4)
+phone:"+31 6 1234 5678", bio: "Hacker & Author", hour_rate: 15, rating: 4, available_hours: Faker::Number.between(1, 48))
 blane[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459254853/blane_saezl3.jpg"
 blane.save!
 
 sjors = User.new(email: "sjors@email.com", password: "12345678", guide: true, first_name: "Sjors", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Iconoclastic. Polyamorous. GitHubber. I say we take off and nuke the patriarchy from orbit. It’s the only way to be sure.", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+phone:Faker::PhoneNumber.cell_phone, bio: "Iconoclastic. Polyamorous. GitHubber. I say we take off and nuke the patriarchy from orbit. It’s the only way to be sure.", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
 sjors[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_6_jvdhqo.jpg"
 sjors.save!
 
 kim = User.new(email: "Kim@email.com", password: "12345678", guide: true, first_name: "Kim", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Immigrant. Rationalist", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+phone:Faker::PhoneNumber.cell_phone, bio: "Immigrant. Rationalist", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
 kim[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235352/guide_10_skuxvj.jpg"
 kim.save!
 
 angel = User.new(email: "Angel@email.com", password: "12345678", guide: true, first_name: "Angel", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Chilli dogs & a good cup of tea. Mental Health advocate", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+phone:Faker::PhoneNumber.cell_phone, bio: "Chilli dogs & a good cup of tea. Mental Health advocate", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
 angel[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235352/guide_9_leuyj8.jpg"
 angel.save!
 
 emma = User.new(email: "Emma@email.com", password: "12345678", guide: true, first_name: "Emma", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Fighting to save the Universe from The Powers", hour_rate: Faker::Number.between(6, 20), rating: 5)
+phone:Faker::PhoneNumber.cell_phone, bio: "Fighting to save the Universe from The Powers", hour_rate: Faker::Number.between(6, 20), rating: 5, available_hours: Faker::Number.between(1, 48))
 emma[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg"
 emma.save!
 
 chantal = User.new(email: "Chantal@email.com", password: "12345678", guide: true, first_name: "Chantal", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Pie enthusiast, fluent in Dad Humor, and Cleveland evangelist", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+phone:Faker::PhoneNumber.cell_phone, bio: "Pie enthusiast, fluent in Dad Humor, and Cleveland evangelist", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
 chantal[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_3_otlc41.jpg"
 chantal.save!
 
 sara = User.new(email: "Sara@email.com", password: "12345678", guide: true, first_name: "Sara", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Adventuring daily into the world", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+phone:Faker::PhoneNumber.cell_phone, bio: "Adventuring daily into the world", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
 sara[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_4_rc4lni.jpg"
 sara.save!
 
 hendrik = User.new(email: "Hendrik@email.com", password: "12345678", guide: true, first_name: "Hendrik", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: " You’ll be unhappy – but in new, exciting and important ways", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+phone:Faker::PhoneNumber.cell_phone, bio: " You’ll be unhappy – but in new, exciting and important ways", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
 hendrik[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235352/guide_7_onjj2t.jpg"
 hendrik.save!
 
 peter = User.new(email: "Peter@email.com", password: "12345678", guide: true, first_name: "Peter", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Foodie | Football | Ad Tech | Disruptive Innovation", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5))
+phone:Faker::PhoneNumber.cell_phone, bio: "Foodie | Football | Ad Tech | Disruptive Innovation", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
 peter[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_5_ogppau.jpg"
 peter.save!
 
@@ -103,19 +103,19 @@ henna.save!
 
 puts "create category"
 
-sport = Category.create!(name: "Sport", description: "Activities or stay active at a slightly more moderate pace throughout Amsterdam")
+sport = Category.create!(name: "Sport", description: "Feel like staying active during your periode in Amsterdam?")
 sport[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256332/sport-sm_bhgpwr.jpg"
 sport.save!
 
-party = Category.create!(name: "Party", description: "All the parties in Amsterdam - the type of music, crowd and atmosphere.")
+party = Category.create!(name: "Party", description: "Searching for a amazing party with a great atmosphere among the locals?")
 party[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256331/party-sm_bm1gna.jpg"
 party.save!
 
-food = Category.create!(name: "Food", description: "Restaurants bringing together the best places to eat out from throughout Amsterdam.")
+food = Category.create!(name: "Food", description: "Your guide can bring together the best places to eat out throughout Amsterdam.")
 food[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256331/food-sm_yzneke.jpg"
 food.save!
 
-bar = Category.create!(name: "Bar", description: "Bars, pubs and the best places to drink in Amsterdam")
+bar = Category.create!(name: "Bar", description: "Bars, pubs and locals with drinks in Amsterdam")
 bar[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459256331/drink-sm_jknrxx.jpg"
 bar.save!
 
