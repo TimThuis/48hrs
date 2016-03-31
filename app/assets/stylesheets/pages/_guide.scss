@@ -60,9 +60,10 @@
       }
       .guide-card-bio-description{
         color: white;
-        padding: 22px 20px 10px 20px;
+        padding: 22px 30px 10px 30px;
         opacity: 0.7;
         font-size: 13.5px;
+        line-height: 2;
       }
       .guide-card-bio-hour-rate{
         color: #F6F6F6;
@@ -79,15 +80,28 @@
     h3 {
       color: $black-own;
       text-transform: uppercase;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      background: #EFEFEF;
+      padding: 10px 0;
+      border-radius: 5px;
+      font-size: 23px;
+      i{
+        font-size: 48px;
+        padding: 10px;
+      }
+      span.hrs-left {
+        padding: 10px;
+      }
     }
   }
 }
 span.hrs-left {
   font-size: 16px;
   color: $black-own;
-  font-weight: 600;
+  font-weight: 400;
   margin-left: 10px;
-  color: #C7C7C7;
   text-transform: none;
 }
 
@@ -101,8 +115,7 @@ span.hrs-left {
 
 .card-rating {
   color: white;
-      opacity: 0.7;
-
+  opacity: 0.7;
 }
 
 .guide-card-tours {
@@ -110,11 +123,18 @@ span.hrs-left {
  padding: 20px 60px;
 }
 
+.guide-card-tours h4{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 15px;
+  color: #c7c7c7;
+}
+
 .user-card-review {
   // background: white;
   display: flex;
   position: relative;
-  margin: 20px 0 40px 0;
+  margin: 40px 0 40px 0;
   &-profile{
     flex: 0 0 125px;
     padding: 10px;
@@ -122,62 +142,97 @@ span.hrs-left {
 }
 
 a.button-booking {
-  margin-top: 20px;
+  margin-top: 10px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.07);
   text-decoration: none;
   color: $yellow-own;
   display: block;
   background-color: #3C3838;
-  padding: 10px 25px 2px 25px;
-  font-weight: 600;
+  font-weight: 400;
   transition: all ease 300ms;
   opacity: 1;
-  width: 120px;
+  width: 100px;
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  padding-top: 10px;
   &:hover {
-    opacity: 0.8;
+    opacity: 0.9;
   }
 }
 
 .guide-card-tour {
-  box-shadow: 0 1px 2px rgba(0,0,0,0.07);
+  border-radius: 5px;
+  padding: 30px 30px 30px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #F6F6F6;
   margin: 20px 0;
+  i {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    color: $yellow-own;
+  }
   span {
     color: #C7C7C7;
+    font-size: 14px;
+    font-weight: 400;
   }
 }
 
+.flex-card-current-category {
+ flex-direction: row;
+ display: flex;
+}
+
+.flex-card-current-category h3 {
+  flex:0 0 30%;
+}
+
+.flex-card-booking-about {
+  display: flex;
+  flex-flow: column;
+  padding-top: 25px;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  justify-content: center;
+}
 
 .guide-card-booking {
   margin-top: 20px;
 }
 
 p.booking-description {
-  margin: 10px;
+  padding: 0 15px 0 0;
   flex: 5;
 }
 
 a.button-checking {
- border: 1px solid whitesmoke;
- margin: 10px;
- box-shadow: 0 1px 2px rgba(0,0,0,0.07);
  text-decoration: none;
  color: $yellow-own;
  display: block;
- padding: 10px 25px 2px 25px;
- font-weight: 600;
+ font-weight: 400;
  transition: all ease 300ms;
  opacity: 1;
  background: #3B3737;
+ border-radius: 5px;
+ margin-left: 20px;
+ display: flex;
+ width: 80px;
+ justify-content: center;
+ padding-top: 10px;
  &:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 }
 
 .guide-card-avarage-rating {
+  p.avarage-number {
+    font-size: 27px;
+  }
   h4 {
     margin: 0;
     margin-bottom: 30px;

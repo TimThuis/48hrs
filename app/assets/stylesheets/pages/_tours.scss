@@ -1,12 +1,3 @@
-p.category-description {
-  color: white;
-  margin-bottom: 50px;
-  font-size: 20px;
-  position: relative;
-  opacity: .8;
-  font-weight: 100;
-}
-
 @keyframes fadeInSlow {
   0% {
     opacity: 0;
@@ -18,6 +9,21 @@ p.category-description {
     transform: scale(1.1);
   }
 }
+
+h1.title-tour {
+  text-shadow: 0px 0px 2px rgba(150, 150, 150, 0.72);
+}
+
+p.category-description {
+  color: white;
+  text-shadow: 0px 0px 2px rgba(150, 150, 150, 0.72);
+  margin-bottom: 50px;
+  font-size: 20px;
+  position: relative;
+  opacity: .8;
+  font-weight: 100;
+}
+
 
 .wrapper-tours {
   position: relative;

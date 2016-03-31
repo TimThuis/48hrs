@@ -28,55 +28,61 @@
 
   <div class="guide-card-information">
     <div class="guide-card-about">
-      <h3><%= main_tour.category.name %> <span class="hrs-left">(20hrs left)</span></h3>
-      <p><%= main_tour.description %></p>
-      <%= link_to new_tour_booking_path(main_tour), class: "button-booking" do %>
-      <p>Booking</p>
-      <% end %>
+      <div class="flex-card-current-category">
+        <h3><i class="<%= category_icon_css_class(main_tour.category) %>"></i>
+          <%= main_tour.category.name %> <span class="hrs-left">20hrs left</span></h3>
 
+          <div class="flex-card-booking-about">
+            <p><%= main_tour.description %></p>
+            <%= link_to new_tour_booking_path(main_tour), class: "button-booking" do %>
+
+            <p>Booking</p>
+            <% end %>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <div class="guide-card-information">
-    <div class="guide-card-tours">
+    <div class="guide-card-information">
+      <div class="guide-card-tours">
+       <h4>More tours</h4>
+
+       <% extra_tours.each do |tour| %>
+       <div class="guide-card-tour">
+         <i class="<%= category_icon_css_class(main_tour.category) %>"></i>
+         <p class="booking-description"><%= tour.description %></p>
+         <span class"hrs-left">1hr left</span>
+         <%= link_to detail_guide_path(guide, category_id: tour.category_id), remote: true, class: "button-checking" do %>
+         <p>Check</p>
+         <% end %>
+       </div>
+       <% end %>
+     </div>
+   </div>
+
+
+   <div class="guide-card-rating text-center">
      <hr>
-     <h4>More tours</h4>
-
-     <% extra_tours.each do |tour| %>
-     <div class="guide-card-tour">
-      <p class="booking-description"><%= tour.description %></p>
-      <span class"hrs-left">1hr left</span>
-      <%= link_to detail_guide_path(guide, category_id: tour.category_id), remote: true, class: "button-checking" do %>
-      <p>Check</p>
-      <% end %>
+     <div class="guide-card-avarage-rating">
+      <p class="avarage-number"> <%= guide.rating %>.0</p>
+      <h4>Average Rating</h4>
     </div>
-    <% end %>
   </div>
-</div>
 
-
-<div class="guide-card-rating text-center">
- <hr>
- <div class="guide-card-avarage-rating">
-  <p class="avarage-number"> <%= guide.rating %>.0</p>
-  <h4>Average Rating</h4>
-</div>
-</div>
-
-<div class="user-card-review">
-  <div class="arrow-left"></div>
-  <div class="user-card-review-profile">
-    <div class="user-avatar-review-letter"><span>S</span></div>
+  <div class="user-card-review">
+    <div class="arrow-left"></div>
+    <div class="user-card-review-profile">
+      <div class="user-avatar-review-letter"><span>S</span></div>
+    </div>
+    <div class="user-card-comment-row">
+     <div class="user-card-review-comment">
+      <p>Was a very helpfull session, straight to the point of what I need! Thanks!</p>
+    </div>
+    <div class="user-card-review-comment-footer">
+      <p>Susan</p>
+      <p class="date">Mar 24, 2016</p>
+    </div>
   </div>
-  <div class="user-card-comment-row">
-   <div class="user-card-review-comment">
-    <p>Was a very helpfull session, straight to the point of what I need! Thanks!</p>
-  </div>
-  <div class="user-card-review-comment-footer">
-    <p>Susan</p>
-    <p class="date">Mar 24, 2016</p>
-  </div>
-</div>
 </div>
 
 
