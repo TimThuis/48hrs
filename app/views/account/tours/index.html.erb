@@ -1,31 +1,52 @@
+<%= render "shared/navbarback" %>
+<%= render "shared/navbarspace" %>
+
 <div class="container-index-tours">
   <div class="container">
     <div class="row">
       <div class="container-header-tours">
         <h1><b><%= @guide.first_name %>'s</b> tours</h1>
         <div class="header-line"></div>
-        <%= link_to "Add", new_account_tour_path, :class => "btn btn-success btn-sm"%>
+        <%= link_to "Add", new_account_tour_path, :class => "btn btn-default btn-sm"%>
         <%= link_to "Homepage", root_path, :class => "btn btn-default btn-sm" %>
       </div>
       <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        <table class="table table-hover table-responsive" style="width:100%">
+        <table class="table table-striped table-responsive table-tours" style="width:100%">
           <thead>
             <tr>
               <th>Category</th>
               <th>Description</th>
-              <th></th>
-              <th></th>
+              <th>Edit</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <% @tours.each do |tour| %>
           <tr>
-            <td><%= tour.category.name %></td>
-            <td><%= tour.description %></td>
-            <td class= "text-right">
-            <%= link_to "edit", edit_account_tour_path(tour), :class => "btn btn-primary btn-sm"   %>
-              <%= link_to "delete", account_tour_path(tour), method: :delete, data: { confirm: "Are you sure?" },  :class => "btn btn-warning btn-sm"%></td>
+            <td style="background-color: #3C3838;">
+              <div class="category-icon">
+                <div><i class="<%= category_icon_css_class \
+                (tour.category) %>"></i></div>
+              <%= tour.category.name %>
+              </div>
+            </td>
+            <td>
+            <%= tour.description %></td>
+            <td class="text-center">
+              <%= link_to edit_account_tour_path(tour) do %>
+                <div class="icon-tours-edit">
+                  <i class="fa fa-pencil"></i>
+                </div>
               <% end %>
+            </td>
+            <td class="text-center">
+              <%= link_to  account_tour_path(tour), method: :delete, data: { confirm: "Are you sure?" } do %>
+                <div class="icon-tours-delete">
+                  <i class="fa fa-times-circle-o"></i>
+                </div>
+              <% end %>
+            </td>
             </tr>
+            <% end %>
           </table>
         </div>
       </div>
