@@ -34,6 +34,11 @@
             <i class="fa fa-book"></i>  <%= t ".profile", default: "Bookings" %>
           <% end %>
         </li>
+          <li>
+           <%= link_to account_tours_path do %>
+             <i class="fa fa-file-text"></i>  <%= t ".profile", default: "Tours" %>
+           <% end %>
+         </li>
       <% end %>
       <li>
         <%= link_to root_path do %>

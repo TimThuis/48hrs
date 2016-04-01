@@ -28,6 +28,7 @@
   // text-transform: uppercase;
   font-size: 15px;
   padding-left: 20px;
+  margin-top: 8px;
 }
 
 .sign-in-link {
@@ -35,6 +36,7 @@
   // text-transform: uppercase;
   font-size: 15px;
   padding-left: 20px;
+  margin-top: 8px;
 }
 
 .password-link {
@@ -42,6 +44,7 @@
   // text-transform: uppercase;
   font-size: 15px;
   padding-left: 20px;
+  margin-top: 8px;
 }
 
 .login-link {
@@ -49,6 +52,7 @@
   // text-transform: uppercase;
   font-size: 15px;
   padding-left: 20px;
+  margin-top: 8px;
 }
 
 .login-link:hover {
@@ -71,14 +75,34 @@
   text-decoration: none;
 }
 
-.facebook-link {
+.facebook-link {
+  a {
+  text-decoration: none
+  }
+}
+
+.facebook-button {
   color: white;
   font-size: 15px;
   padding-left: 20px;
+  background-color: #37599A;
+  border-radius: 3px;
+  padding: 13px 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -27px;
+  p {
+  }
+  i {
+    padding-left: 15px;
+    font-size: 18px;
+  }
 }
 
-.facebook-link:hover {
-  color: #F7DB61;
-  text-decoration: none;
+.facebook-button:hover {
+  color: white;
+  background-color: #27406F;
+    text-decoration: none;
 }
 
