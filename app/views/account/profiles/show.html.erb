@@ -15,7 +15,8 @@
           <div class="header-line-left"></div>
         </div>
         <div class="account-info">
-          <h2>Basic</h2>
+          <span class="header-account-info">Basic</span class="header-account-info">
+          <div class="white-line"></div>
           <p>
             <i class="fa fa-user"></i>
             <%= current_user.first_name %>
@@ -26,7 +27,7 @@
             <%= current_user.birthday %>
           </p>
           <hr>
-          <h2>Contact</h2>
+          <span class="header-account-info">Contact</span class="header-account-info">
           <p>
             <i class="fa fa-phone"></i>
             <%= current_user.phone %>
@@ -36,7 +37,7 @@
             <%= current_user.email %>
           </p>
           <hr>
-          <h2>Address</h2>
+          <span class="header-account-info">Address</span class="header-account-info">
           <p>
             <i class="fa fa-location-arrow">
             </i> <%= current_user.street %>,
@@ -44,13 +45,13 @@
             <%= current_user.city %> (NL)
           </p>
           <hr>
-          <h2>History</h2>
+          <span class="header-account-info">History</span class="header-account-info">
           <p>
             <i class="fa fa-file-text-o"></i>
             <%= current_user.bio %>
           </p>
           <hr>
-          <h2>Business</h2>
+          <span class="header-account-info">Business</span class="header-account-info">
           <p>
             <i class="fa fa-eur"></i>
             <%= current_user.hour_rate %>

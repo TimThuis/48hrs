@@ -19,14 +19,14 @@ puts "create user"
 # Guides
 quoc = User.new(email: "q@email.com", password: "12345678", guide: true, first_name: "Quoc", last_name: "Bui", \
 birthday: "1990-11-02", photo: "", street: "Vondelparklaan 22", zipcode: "1234 AB", city: "Amsterdam", \
-phone:"+31 6 1234 5678", bio: "Software consultant, OSS contributor, blogger", hour_rate: 10, rating: 3, available_hours: Faker::Number.between(1, 48))
+phone:"+31 6 1234 5678", bio: "Software consultant, blogger and I'm a passionate foodie originally from Vietnam. ", hour_rate: 10, rating: 3, available_hours: Faker::Number.between(1, 48))
 quoc[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459254858/q_xctupa.jpg"
 quoc.save!
 
-blane = User.new(email: "blane@email.com", password: "12345678", guide: true, first_name: "Blane", last_name: "Matsardji", \
+blane = User.new(email: "blane@email.com", password: "12345678", guide: true, first_name: "Blane", last_name: "Amatsardji", \
 birthday: "1992-05-21", photo: "", street: "De pijp 100", zipcode: "1234 AB", city: "Amsterdam", \
-phone:"+31 6 1234 5678", bio: "Hacker & Author", hour_rate: 15, rating: 4, available_hours: Faker::Number.between(1, 48))
-blane[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459254853/blane_saezl3.jpg"
+phone:"+31 6 1234 5678", bio: "Hacker, shopping guru and working as an actor, I traveled all over the world. ", hour_rate: 15, rating: 4, available_hours: Faker::Number.between(1, 48))
+blane[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459497845/blane-2_qecnie.jpg"
 blane.save!
 
 sjors = User.new(email: "sjors@email.com", password: "12345678", guide: true, first_name: "Sjors", last_name: Faker::Name.last_name, \
@@ -37,50 +37,50 @@ sjors.save!
 
 kim = User.new(email: "Kim@email.com", password: "12345678", guide: true, first_name: "Kim", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Immigrant. Rationalist", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
-kim[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235352/guide_10_skuxvj.jpg"
+phone:Faker::PhoneNumber.cell_phone, bio: "Hello I am Kim, Born and raised in the Amsterdam would love to show around.", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
+kim[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459497482/nina_jfgx7j.jpg"
 kim.save!
 
 angel = User.new(email: "Angel@email.com", password: "12345678", guide: true, first_name: "Angel", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
 phone:Faker::PhoneNumber.cell_phone, bio: "Chilli dogs & a good cup of tea. Mental Health advocate", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
-angel[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235352/guide_9_leuyj8.jpg"
+angel[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459497482/walid_pljkk2.jpg"
 angel.save!
 
 emma = User.new(email: "Emma@email.com", password: "12345678", guide: true, first_name: "Emma", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Fighting to save the Universe from The Powers", hour_rate: Faker::Number.between(6, 20), rating: 5, available_hours: Faker::Number.between(1, 48))
+phone:Faker::PhoneNumber.cell_phone, bio: "Welcome to the Netherlands! My name is Emma, I am a certified guide who loves traveling and meeting people from all over the world. ", hour_rate: Faker::Number.between(6, 20), rating: 5, available_hours: Faker::Number.between(1, 48))
 emma[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg"
 emma.save!
 
 chantal = User.new(email: "Chantal@email.com", password: "12345678", guide: true, first_name: "Chantal", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Pie enthusiast, fluent in Dad Humor, and Cleveland evangelist", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
-chantal[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_3_otlc41.jpg"
+phone:Faker::PhoneNumber.cell_phone, bio: "I have been working in tourism for more than five years now. The first two years I organised tours for the Dutch.", hour_rate: Faker::Number.between(6, 20), rating: 4, available_hours: Faker::Number.between(1, 48))
+chantal[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459497482/bo_cmd4n9.jpg"
 chantal.save!
 
 sara = User.new(email: "Sara@email.com", password: "12345678", guide: true, first_name: "Sara", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Adventuring daily into the world", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
-sara[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_4_rc4lni.jpg"
+phone:Faker::PhoneNumber.cell_phone, bio: "I am a personal guide offering tours in Amsterdam, showing you the must see attractions", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
+sara[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459497482/emma_kaepfl.jpg"
 sara.save!
 
 hendrik = User.new(email: "Hendrik@email.com", password: "12345678", guide: true, first_name: "Hendrik", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: " You’ll be unhappy – but in new, exciting and important ways", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
-hendrik[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235352/guide_7_onjj2t.jpg"
+phone:Faker::PhoneNumber.cell_phone, bio: " You’ll be happy in new, exciting and important ways", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
+hendrik[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459497482/peter_hpy2o8.jpg"
 hendrik.save!
 
 peter = User.new(email: "Peter@email.com", password: "12345678", guide: true, first_name: "Peter", last_name: Faker::Name.last_name, \
 birthday: "2000-01-01", photo: "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_1_nb6izt.jpg", street: Faker::Address.street_address, zipcode: Faker::Address.zip_code, city: Faker::Address.city_prefix, \
-phone:Faker::PhoneNumber.cell_phone, bio: "Foodie | Football | Ad Tech | Disruptive Innovation", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
-peter[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459235351/guide_5_ogppau.jpg"
+phone:Faker::PhoneNumber.cell_phone, bio: "Foodie | Football | Ad Tech ", hour_rate: Faker::Number.between(6, 20), rating: Faker::Number.between(1, 5), available_hours: Faker::Number.between(1, 48))
+peter[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459498163/beer_oqynck.jpg"
 peter.save!
 
 
 # Visitor
 tim = User.new(email: "tim@email.com", password: "12345678", guide: false, first_name: "Tim", last_name: "Thuis", phone:"+31 6 1234 5678")
-tim[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459413443/tim-profile_eowfgp.jpg"
+tim[:photo] = "http://res.cloudinary.com/timthuis/image/upload/v1459497848/tim-2_n1n5pv.jpg"
 tim.save!
 
 andre = User.new(email: "andre@email.com", password: "12345678", guide: false, first_name: "Andre", last_name: "de Vries", phone:"+31 6 1234 5678", photo: "")
@@ -137,7 +137,7 @@ tour5 = Tour.create!(user: sara, category: cultural, description: "Let the histo
 tour6 = Tour.create!(user: sara, category: sport, description: "An active or tranquil biking tour through Amsterdam’s city centre, by bike everything is possible!")
 tour7 = Tour.create!(user: hendrik, category: party, description: "Arrange your trip in advance and start your stay in Amsterdam without stress. Avoid long taxi lines. Enjoy the ride to your Hotel.")
 tour8 = Tour.create!(user: peter, category: sport, description: "Yellow Bike has put together a safely guided bicycle tour which will give you a fascinating picture of this famous canal city’s rich history.")
-tour9 = Tour.create!(user: emma, category: food, description: "A special experience; enjoy an extensive four course dinner aboard a canal boat.")
+tour9 = Tour.create!(user: emma, category: food, description: "A special experience: Enjoy an extensive four course dinner aboard a canal boat.")
 tour10 = Tour.create!(user: peter, category: cultural, description: "A wonderful puzzle game for international guests in Amsterdam.")
 tour11 = Tour.create!(user: emma, category: cultural, description: "The eastern harbour area: a wonderful place for a walk. Great, modern architecture in a historical environment.")
 tour12 = Tour.create!(user: quoc, category: bar, description: "Café and bars walking tour through Amsterdam. Always a private tour with your guide and visit of three typical bars in the old town.")
