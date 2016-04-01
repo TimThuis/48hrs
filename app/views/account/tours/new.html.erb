@@ -1,11 +1,20 @@
-<h1>Account Tours New</h1>
+<%= render "shared/navbarback" %>
+<%= render "shared/navbarspace" %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+      <h1><b>Add</b> your new tour</h1>
+      <div class="header-line-left"></div>
 
-<%= simple_form_for(@tour, url: account_tours_path) do |f| %>
-<%= f.error_notification %>
+      <%= simple_form_for(@tour, url: account_tours_path) do |f| %>
+      <%= f.error_notification %>
 
-<%= f.association :category, collection: @categories %>
-<%= f.input :description %>
-<%= f.button :submit %>
-<%= link_to "Back", account_tours_path, :class => "btn btn-default"%>
+      <%= f.association :category, collection: @categories %>
+      <%= f.input :description %>
+      <%= f.button :submit %>
+      <%= link_to "Back", account_tours_path, :class => "btn btn-default"%>
 
-<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

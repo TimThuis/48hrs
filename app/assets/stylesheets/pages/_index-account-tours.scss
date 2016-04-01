@@ -1,3 +1,35 @@
 .container-header-tours {
   text-align: center;
+  margin-bottom: 40px;
+}
+
+.icon-tours-edit {
+  color: #f0ad4e;
+  font-size: 25px;
+}
+
+.icon-tours-delete {
+  color: #d9534f;
+  font-size: 25px;
+}
+
+.category-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  div {
+    padding-bottom: 4px;
+  }
+  i {
+    font-size: 25px;
+    color: rgba(255,255,255,0.4);
+  }
+}
+
+.table-tours {
+  tr {
+    padding: 20px;
+  }
 }
