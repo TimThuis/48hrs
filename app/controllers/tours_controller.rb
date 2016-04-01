@@ -9,7 +9,8 @@ class ToursController < ApplicationController
     else
       @selected_category = Category.find(category_id)
       @tours = Tour.select{|t| t.category == @selected_category}
-      @guides = User.select{|u| u.guide == true && u.tours.map{|t| t.category.id}.include?(category_id.to_i)}
+      guides = User.select{|u| u.guide == true && u.tours.map{|t| t.category.id}.include?(category_id.to_i)}
+      @guides = guides.sort {|guide1, guide2| guide2[:rating] <=> guide1[:rating]}
       if @guides.blank?
         flash[:notice] = "We're sorry, we don't have any guides for this category."
         @guides = User.select{|u| u.guide}
